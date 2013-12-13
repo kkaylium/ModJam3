@@ -1,5 +1,6 @@
 package kkaylium.GlowGlass;
 
+import net.minecraft.creativetab.CreativeTabs;
 import kkaylium.GlowGlass.blocks.GGBlocks;
 import kkaylium.GlowGlass.items.GGItems;
 import cpw.mods.fml.common.Mod;
@@ -22,17 +23,19 @@ public class GlowGlass
 	@SidedProxy(clientSide = "kkaylium.GlowGlass.ClientProxy", serverSide = "kkaylium.GlowGlass.CommonProxy")
 	public static CommonProxy proxy; 
 	
+	public static CreativeTabs GGTab = new GlowGlassCreativeTab(CreativeTabs.getNextID(), "Glow Glass");
+	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event)
 	{
-		
+		GGBlocks.initBlocks();
+		GGItems.initItems();
 	}
 	
 	@EventHandler
 	public void load(FMLInitializationEvent event)
 	{
-		GGBlocks.initBlocks();
-		GGItems.initItems();
+		
 	}
 	
 	@EventHandler
