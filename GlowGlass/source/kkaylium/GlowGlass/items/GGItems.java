@@ -11,8 +11,8 @@ public class GGItems {
 	
 	public static void initItems()
 	{
-		glowCrystal = new ItemGlowCrystal(1000).setUnlocalizedName("WhiteGlowCrystal");
-		GameRegistry.registerItem(glowCrystal, "WhiteGlowCrystal");
+		glowCrystal = new ItemGlowCrystal(1000);
+		GameRegistry.registerItem(glowCrystal, "GlowCrystal");
 		LanguageRegistry.addName(new ItemStack(glowCrystal, 1, 0), "Glow Crystal: White");
 		LanguageRegistry.addName(new ItemStack(glowCrystal, 1, 1), "Glow Crystal: Black");
 		
