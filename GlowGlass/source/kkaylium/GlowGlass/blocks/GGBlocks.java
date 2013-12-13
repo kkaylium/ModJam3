@@ -1,5 +1,6 @@
 package kkaylium.GlowGlass.blocks;
 
+import kkaylium.GlowGlass.lib.Strings;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import net.minecraft.block.Block;
@@ -12,10 +13,11 @@ public class GGBlocks {
 	public static void initBlocks()
 	{
 		GlowGlass = new BlockGlowGlass(500).setUnlocalizedName("GlowGlass");
-			GameRegistry.registerBlock(GlowGlass, "GlowGlass");
+			//GameRegistry.registerBlock(GlowGlass, "GlowGlass");
+			GameRegistry.registerBlock(GlowGlass, Strings.MOD_ID + (GlowGlass.getUnlocalizedName().substring(5)));
 			LanguageRegistry.addName(new ItemStack(GlowGlass, 1, 0), "Glow Glass: White");
 			LanguageRegistry.addName(new ItemStack(GlowGlass, 1, 1), "Glow Glass: Black");
-		
+			
 	}
 
 }
