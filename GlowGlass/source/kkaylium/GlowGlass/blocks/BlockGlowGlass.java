@@ -3,6 +3,8 @@ package kkaylium.GlowGlass.blocks;
 import java.util.List;
 import java.util.Random;
 
+import kkaylium.GlowGlass.GlowGlass;
+
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
@@ -20,7 +22,8 @@ public class BlockGlowGlass extends Block{
 	
 	public BlockGlowGlass(int par1) {
 		super(par1, Material.glass);
-		this.setCreativeTab(CreativeTabs.tabBlock);
+		this.setTextureName("GlowGlass");
+		this.setCreativeTab(GlowGlass.GGTab);
 		this.setLightValue(1.0F);
 	}
 	
@@ -54,7 +57,7 @@ public class BlockGlowGlass extends Block{
 		
 		for(int i = 0; i < this.icons.length; i++)
 		{
-			this.icons[i] = iconRegister.registerIcon("glowglass:GlowGlass" + glassNames[i]);
+			this.icons[i] = iconRegister.registerIcon("glowglass:" + this.getTextureName() + glassNames[i]);
 		}
 	}
 	

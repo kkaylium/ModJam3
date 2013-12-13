@@ -2,6 +2,8 @@ package kkaylium.GlowGlass.items;
 
 import java.util.List;
 
+import kkaylium.GlowGlass.GlowGlass;
+
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.renderer.texture.IconRegister;
@@ -22,7 +24,7 @@ public class ItemGlowCrystal extends Item{
 		super(par1);
 		this.setHasSubtypes(true);
 		this.setMaxDamage(0);
-		this.setCreativeTab(CreativeTabs.tabMaterials);
+		this.setCreativeTab(GlowGlass.GGTab);
 		
 	}
 	
