@@ -1,6 +1,7 @@
 package kkaylium.GlowGlass.blocks;
 
 import java.util.List;
+import java.util.Random;
 
 import kkaylium.GlowGlass.GlowGlass;
 import cpw.mods.fml.relauncher.Side;
@@ -11,6 +12,7 @@ import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Icon;
+import net.minecraft.world.World;
 
 public class BlockGlowOre extends Block{
 
@@ -67,5 +69,22 @@ public class BlockGlowOre extends Block{
 		}
 	}
 	
+	private void sparkle(World world, int par2, int par3, int par4)
+	{
+		Random random = world.rand;
+		double d0 = 0.0625D;
+		for(int i = 0; i < 6; i++)
+		{
+			double d1 = (double)((float)par2 + random.nextFloat());
+			double d2 = (double)((float)par3 + random.nextFloat());
+			double d3 = (double)((float)par4 + random.nextFloat());
+			
+			if(i == 0 && !world.isBlockOpaqueCube(par2, par3 + 1, par4))
+			{
+				
+			}
+		}
+		
+	}
 	
 }
