@@ -19,7 +19,7 @@ public class GlowGlassItemBlock extends ItemBlock{
 	public String getUnlocalizedName(ItemStack itemStack)
 	{
 		StringBuilder unlocalizedName = new StringBuilder();
-		int meta = MathHelper.clamp_int(itemStack.getItemDamage(), 0, 1);
+		int meta = MathHelper.clamp_int(itemStack.getItemDamage(), 0, 10);
 		
 		unlocalizedName.append("item.");
 		unlocalizedName.append("glowglass:");

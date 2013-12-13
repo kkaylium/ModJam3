@@ -16,7 +16,7 @@ import net.minecraft.util.Icon;
 
 public class BlockGlowGlass extends Block{
 
-	public static final String[] glassNames = new String[]{"WHITE", "BLACK"};
+	public static final String[] glassNames = new String[]{"WHITE", "BLACK", "RED", "ORANGE", "YELLOW", "GREEN", "LIGHTBLUE", "BLUE", "PURPLE", "PINK", "SPECIAL"};
 	@SideOnly(Side.CLIENT)
 	private Icon[] icons;
 	
@@ -48,6 +48,15 @@ public class BlockGlowGlass extends Block{
 	{
 		par3List.add(new ItemStack(par1, 1, 0));
 		par3List.add(new ItemStack(par1, 1, 1));
+		par3List.add(new ItemStack(par1, 1, 2));
+		par3List.add(new ItemStack(par1, 1, 3));
+		par3List.add(new ItemStack(par1, 1, 4));
+		par3List.add(new ItemStack(par1, 1, 5));
+		par3List.add(new ItemStack(par1, 1, 6));
+		par3List.add(new ItemStack(par1, 1, 7));
+		par3List.add(new ItemStack(par1, 1, 8));
+		par3List.add(new ItemStack(par1, 1, 9));
+		par3List.add(new ItemStack(par1, 1, 10));
 	}
 	 
 	@SideOnly(Side.CLIENT)
