@@ -44,7 +44,7 @@ public class GGBlocks {
 			GameRegistry.registerBlock(GlowIceOre, "GlowIceOre");
 			LanguageRegistry.addName(GlowIceOre, "Glow Ice Ore");
 			
-		GlowFence = new BlockGlowFence(503);
+		GlowFence = new BlockGlowFence(503, null);
 			GameRegistry.registerBlock(GlowFence, "GlowFence");
 			LanguageRegistry.addName(GlowFence, "Glow Fence");
 	}
