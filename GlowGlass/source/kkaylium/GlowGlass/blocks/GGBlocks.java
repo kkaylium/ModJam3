@@ -12,7 +12,7 @@ public class GGBlocks {
 	public static void initBlocks()
 	{
 		GlowGlass = new BlockGlowGlass(500).setUnlocalizedName("GlowGlass");
-			GameRegistry.registerBlock(GlowGlass, GGItemBlock.class, "GlowGlass");
+			GameRegistry.registerBlock(GlowGlass, GlowGlassItemBlock.class, "GlowGlass");
 			LanguageRegistry.addName(new ItemStack(GlowGlass, 1, 0), "Glow Glass: White");
 			LanguageRegistry.addName(new ItemStack(GlowGlass, 1, 1), "Glow Glass: Black");
 			
