@@ -1,5 +1,7 @@
 package kkaylium.GlowGlass;
 
+import kkaylium.GlowGlass.blocks.GGBlocks;
+import kkaylium.GlowGlass.items.GGItems;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -26,7 +28,8 @@ public class GlowGlass
 	@EventHandler
 	public void load()
 	{
-		
+		GGBlocks.initBlocks();
+		GGItems.initItems();
 	}
 	
 	@EventHandler
