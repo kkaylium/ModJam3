@@ -21,12 +21,12 @@ public class GlowCrystalOresItemBlock extends ItemBlock{
 	public String getUnlocalizedName(ItemStack itemStack)
 	{
 		StringBuilder unlocalizedName = new StringBuilder();
-		int meta = MathHelper.clamp_int(itemStack.getItemDamage(), 0, 1);
+		int meta = MathHelper.clamp_int(itemStack.getItemDamage(), 0, 8);
 		
 		unlocalizedName.append("item.");
 		unlocalizedName.append("glowglass:");
 		unlocalizedName.append("GlowOre");
-		unlocalizedName.append(BlockGlowGlass.glassNames[meta]);
+		unlocalizedName.append(BlockGlowOre.oreNames[meta]);
 		
 		return unlocalizedName.toString();
 	}

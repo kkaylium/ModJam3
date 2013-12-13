@@ -26,17 +26,17 @@ public class GGBlocks {
 			LanguageRegistry.addName(new ItemStack(GlowGlass, 1, 9), "Glow Glass: Pink");
 			LanguageRegistry.addName(new ItemStack(GlowGlass, 1, 10), "Glow Glass: Special");
 			
-		GlowOre = new BlockGlowOre(501).setUnlocalizedName("GlowGlass");
+		GlowOre = new BlockGlowOre(501).setUnlocalizedName("GlowOre");
 			GameRegistry.registerBlock(GlowOre, GlowCrystalOresItemBlock.class, "GlowOre");
-			LanguageRegistry.addName(new ItemStack(GlowOre, 1, 0), "Glow Glass: White");
-			LanguageRegistry.addName(new ItemStack(GlowOre, 1, 1), "Glow Glass: Black");
-			LanguageRegistry.addName(new ItemStack(GlowOre, 1, 2), "Glow Glass: Red");
-			LanguageRegistry.addName(new ItemStack(GlowOre, 1, 3), "Glow Glass: Orange");
-			LanguageRegistry.addName(new ItemStack(GlowOre, 1, 4), "Glow Glass: Yellow");
-			LanguageRegistry.addName(new ItemStack(GlowOre, 1, 5), "Glow Glass: Green");
-			LanguageRegistry.addName(new ItemStack(GlowOre, 1, 6), "Glow Glass: Blue");
-			LanguageRegistry.addName(new ItemStack(GlowOre, 1, 7), "Glow Glass: Purple");
-			LanguageRegistry.addName(new ItemStack(GlowOre, 1, 8), "Glow Glass: Pink");
+			LanguageRegistry.addName(new ItemStack(GlowOre, 1, 0), "Glow Ore: White");
+			LanguageRegistry.addName(new ItemStack(GlowOre, 1, 1), "Glow Ore: Black");
+			LanguageRegistry.addName(new ItemStack(GlowOre, 1, 2), "Glow Ore: Red");
+			LanguageRegistry.addName(new ItemStack(GlowOre, 1, 3), "Glow Ore: Orange");
+			LanguageRegistry.addName(new ItemStack(GlowOre, 1, 4), "Glow Ore: Yellow");
+			LanguageRegistry.addName(new ItemStack(GlowOre, 1, 5), "Glow Ore: Green");
+			LanguageRegistry.addName(new ItemStack(GlowOre, 1, 6), "Glow Ore: Blue");
+			LanguageRegistry.addName(new ItemStack(GlowOre, 1, 7), "Glow Ore: Purple");
+			LanguageRegistry.addName(new ItemStack(GlowOre, 1, 8), "Glow Ore: Pink");
 			
 	}
 
