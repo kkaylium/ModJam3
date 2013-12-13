@@ -139,17 +139,17 @@ public class BlockGlowFence extends Block{
 	
 	public boolean canConnectFenceTo(IBlockAccess par1BlockAccess, int par2, int par3, int par4)
 	{
-		int l = par1BlockAccess.getBlockId(par2, par3, par4);
+		//int l = par1BlockAccess.getBlockId(par2, par3, par4);
 		
-		if(l != this.blockID && l != Block.fenceGate.blockID)
-		{
-			Block block = Block.blocksList[l];
-			return block != null && block.blockMaterial.isOpaque() && block.renderAsNormalBlock() ? block.blockMaterial != Material.pumpkin : false;
-		}
-		else
-		{
+		//if(l != this.blockID && l != Block.fenceGate.blockID)
+		//{
+			//Block block = Block.blocksList[l];
+			//return block != null && block.blockMaterial.isOpaque() && block.renderAsNormalBlock() ? block.blockMaterial != Material.pumpkin : false;
+		//}
+		//else
+		//{
 			return true;
-		}
+		//}
 	}
 	
 	//public static boolean isIdAFence(int par0)
