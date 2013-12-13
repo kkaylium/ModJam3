@@ -2,9 +2,13 @@ package kkaylium.GlowGlass.blocks;
 
 import java.util.List;
 
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+
 import kkaylium.GlowGlass.GlowGlass;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.world.IBlockAccess;
@@ -20,6 +24,7 @@ public class BlockGlowFence extends Block{
 		this.field_94464_a = par2String;
 	}
 	
+	@SuppressWarnings({"rawtypes"})
 	public void addCollisionBoxesToList(World par1World, int par2, int par3, int par4, AxisAlignedBB par5AxisAlignedBB, List par6List, Entity par7Entity)
 	{
 		boolean flag = this.canConnectFenceTo(par1World, par2, par3, par4 - 1);
@@ -139,7 +144,28 @@ public class BlockGlowFence extends Block{
 		if(l != this.blockID && l != Block.fenceGate.blockID)
 		{
 			Block block = Block.blocksList[l];
-			return block != null && block.blockMaterial.isOpaque() && block.renderAsNormalBlock()
+			return block != null && block.blockMaterial.isOpaque() && block.renderAsNormalBlock() ? block.blockMaterial != Material.pumpkin : false;
 		}
+		else
+		{
+			return true;
+		}
+	}
+	
+	//public static boolean isIdAFence(int par0)
+	//{
+	//	return par0 == Block.fence.blockID || par0 == Block.netherFence.blockID;
+	//}
+	
+	@SideOnly(Side.CLIENT)
+	public boolean shoudlSideBeRendered(IBlockAccess par1IBlockAccess, int par2, int par3, int par4, int par5)
+	{
+		return true;
+	}
+	
+	@SideOnly(Side.CLIENT)
+	public void registerIcons(IconRegister iconRegister)
+	{
+		this.blockIcon = iconRegister.registerIcon(this.field_94464_a);
 	}
 }
