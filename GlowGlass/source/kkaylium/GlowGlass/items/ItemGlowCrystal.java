@@ -15,7 +15,7 @@ import net.minecraft.util.MathHelper;
 
 public class ItemGlowCrystal extends Item{
 
-	private String[] crystalNames = new String[] {"WHITE", "BLACK"};
+	private String[] crystalNames = new String[] {"WHITE", "BLACK", "RED", "ORANGE", "YELLOW", "GREEN", "LIGHTBLUE", "BLUE", "PURPLE", "PINK", "SPECIAL"};
 	
 	@SideOnly(Side.CLIENT)
 	private Icon[] icons;
@@ -32,7 +32,7 @@ public class ItemGlowCrystal extends Item{
 	public String getUnlocalizedName(ItemStack itemStack)
 	{
 		StringBuilder unlocalizedName = new StringBuilder();
-		int meta = MathHelper.clamp_int(itemStack.getItemDamage(), 0, 1);
+		int meta = MathHelper.clamp_int(itemStack.getItemDamage(), 0, 10);
 		
 		unlocalizedName.append("item.");
 		unlocalizedName.append("glowglass:");
@@ -46,7 +46,7 @@ public class ItemGlowCrystal extends Item{
 	@SideOnly(Side.CLIENT)
 	public Icon getIconFromDamage(int par1)
 	{
-		int i = MathHelper.clamp_int(par1, 0, 1);
+		int i = MathHelper.clamp_int(par1, 0, 10);
 		return this.icons[i];
 	}
 	
@@ -54,7 +54,7 @@ public class ItemGlowCrystal extends Item{
 	@SuppressWarnings({"rawtypes", "unchecked"})
 	public void getSubItems(int par1, CreativeTabs par2CreativeTabs, List par3List)
 	{
-		for(int i = 0; i < 2; i++)
+		for(int i = 0; i < 10; i++)
 		{
 			par3List.add(new ItemStack(par1, 1, i));
 		}
