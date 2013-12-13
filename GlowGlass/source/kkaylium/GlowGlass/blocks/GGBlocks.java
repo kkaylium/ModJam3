@@ -26,7 +26,7 @@ public class GGBlocks {
 			LanguageRegistry.addName(new ItemStack(GlowGlass, 1, 9), "Glow Glass: Pink");
 			LanguageRegistry.addName(new ItemStack(GlowGlass, 1, 10), "Glow Glass: Special");
 			
-		GlowOre = new BlockGlowOre(500).setUnlocalizedName("GlowGlass");
+		GlowOre = new BlockGlowOre(501).setUnlocalizedName("GlowGlass");
 			GameRegistry.registerBlock(GlowOre, GlowCrystalOresItemBlock.class, "GlowOre");
 			LanguageRegistry.addName(new ItemStack(GlowOre, 1, 0), "Glow Glass: White");
 			LanguageRegistry.addName(new ItemStack(GlowOre, 1, 1), "Glow Glass: Black");
