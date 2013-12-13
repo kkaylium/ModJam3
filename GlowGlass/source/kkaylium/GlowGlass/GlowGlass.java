@@ -2,6 +2,7 @@ package kkaylium.GlowGlass;
 
 import net.minecraft.creativetab.CreativeTabs;
 import kkaylium.GlowGlass.blocks.GGBlocks;
+import kkaylium.GlowGlass.gen.GGNormalWorldGen;
 import kkaylium.GlowGlass.items.GGItems;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -11,6 +12,7 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
+import cpw.mods.fml.common.registry.GameRegistry;
 
 
 @Mod (modid = "glowglass", name = "GlowGlass", version = "0.0.001")
@@ -30,6 +32,8 @@ public class GlowGlass
 	{
 		GGBlocks.initBlocks();
 		GGItems.initItems();
+		
+		GameRegistry.registerWorldGenerator(new GGNormalWorldGen());
 	}
 	
 	@EventHandler

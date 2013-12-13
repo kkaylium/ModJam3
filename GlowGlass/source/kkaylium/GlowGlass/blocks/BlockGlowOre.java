@@ -23,6 +23,7 @@ public class BlockGlowOre extends Block{
 		this.setTextureName("GlowOre");
 		this.setCreativeTab(GlowGlass.GGTab);
 		this.setLightValue(0.1F);
+		this.setTickRandomly(true);
 	}
 	
 	@SideOnly(Side.CLIENT)

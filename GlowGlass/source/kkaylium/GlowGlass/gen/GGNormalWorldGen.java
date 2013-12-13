@@ -30,12 +30,11 @@ public class GGNormalWorldGen implements IWorldGenerator{
 
 	public void generateOverworld(World world, Random random, int chunkX, int chunkZ) {
 		
-		for(int i = 0; i < 20; i++)
+		for(int i = 0; i < 30; i++)
 		{
 			int oreX = chunkX + random.nextInt(16); 
 			int oreY = random.nextInt(40);
 			int oreZ = chunkZ + random.nextInt(16);
-			
 			(new WorldGenMinable(GGBlocks.GlowOre.blockID, 10)).generate(world, random, oreX, oreY, oreZ);
 		}
 	}
