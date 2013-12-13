@@ -69,6 +69,11 @@ public class BlockGlowOre extends Block{
 		}
 	}
 	
+	public void randomDisplayTick(World world, int par2, int par3, int par4, Random random)
+	{
+		this.sparkle(world, par2, par3, par4);
+	}
+	
 	private void sparkle(World world, int par2, int par3, int par4)
 	{
 		Random random = world.rand;
@@ -81,8 +86,39 @@ public class BlockGlowOre extends Block{
 			
 			if(i == 0 && !world.isBlockOpaqueCube(par2, par3 + 1, par4))
 			{
-				
+				d2 = (double)(par3 + 1) + d0;
 			}
+			
+			if(i == 1 && !world.isBlockOpaqueCube(par2, par3 - 1, par4))
+			{
+				d2 = (double)(par3 + 0) - d0;
+			}
+			
+			if(i == 2 && !world.isBlockOpaqueCube(par2, par3, par4 + 1))
+			{
+				d3 = (double)(par4 + 1) + d0;
+			}
+			
+			if(i == 3 && !world.isBlockOpaqueCube(par2, par3, par4 - 1))
+			{
+				d3 = (double)(par4 + 0) - d0;
+			}
+			
+			if(i == 4 && !world.isBlockOpaqueCube(par2 + 1, par3, par4))
+			{
+				d1 = (double)(par2 + 1) + d0;
+			}
+			
+			if(i == 5 && !world.isBlockOpaqueCube(par2 - 1, par3, par4))
+			{
+				d1 = (double)(par2 + 0) - d0;
+			}
+			
+			if (d1 < (double)par2 || d1 > (double)(par2 + 1) || d2 < 0.0D || d2 > (double)(par3 + 1) || d3 < (double)par4 || d3 > (double)(par4 + 1))
+			{
+				world.spawnParticle("reddust", d1, d2, d3, 0.7D, 0.9D, 1.0D);
+			}
+			
 		}
 		
 	}

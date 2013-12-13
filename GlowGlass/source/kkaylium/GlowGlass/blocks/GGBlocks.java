@@ -9,6 +9,8 @@ public class GGBlocks {
 	
 	public static Block GlowGlass;
 	public static Block GlowOre;
+	public static Block GlowIceOre;
+	public static Block GlowFence;
 	
 	public static void initBlocks()
 	{
@@ -38,6 +40,13 @@ public class GGBlocks {
 			LanguageRegistry.addName(new ItemStack(GlowOre, 1, 7), "Glow Ore: Purple");
 			LanguageRegistry.addName(new ItemStack(GlowOre, 1, 8), "Glow Ore: Pink");
 			
+		GlowIceOre = new GlowIceOre(502);
+			GameRegistry.registerBlock(GlowIceOre, "GlowIceOre");
+			LanguageRegistry.addName(GlowIceOre, "Glow Ice Ore");
+			
+		GlowFence = new BlockGlowFence(503);
+			GameRegistry.registerBlock(GlowFence, "GlowFence");
+			LanguageRegistry.addName(GlowFence, "Glow Fence");
 	}
 
 }

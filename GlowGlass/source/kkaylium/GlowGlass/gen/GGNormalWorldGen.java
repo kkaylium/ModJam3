@@ -37,6 +37,13 @@ public class GGNormalWorldGen implements IWorldGenerator{
 			int oreZ = chunkZ + random.nextInt(16);
 			(new WorldGenMinable(GGBlocks.GlowOre.blockID, 10)).generate(world, random, oreX, oreY, oreZ);
 		}
+		for(int i = 0; i < 30; i++)
+		{
+			int oreX = chunkX + random.nextInt(16);
+			int oreY = random.nextInt(100);
+			int oreZ = chunkZ + random.nextInt(16);
+			(new GGIceMinable(GGBlocks.GlowIceOre.blockID, 1)).generate(world, random, oreX, oreY, oreZ);
+		}
 	}
 
 	public void generateNether(World world, Random random, int i, int j) {
