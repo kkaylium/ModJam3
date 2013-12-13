@@ -1,6 +1,5 @@
 package kkaylium.GlowGlass.items;
 
-import java.util.Random;
 
 import net.minecraft.item.Item;
 
@@ -11,9 +10,5 @@ public class ItemGlowCrystal extends Item{
 		
 	}
 	
-	public int quantityDropped(Random par1Random)
-    {
-        return 1;
-    }
 
 }

@@ -6,6 +6,9 @@ import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.SidedProxy;
+import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.event.FMLPostInitializationEvent;
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 
 
@@ -20,20 +23,20 @@ public class GlowGlass
 	public static CommonProxy proxy; 
 	
 	@EventHandler
-	public void preInit()
+	public void preInit(FMLPreInitializationEvent event)
 	{
 		
 	}
 	
 	@EventHandler
-	public void load()
+	public void load(FMLInitializationEvent event)
 	{
 		GGBlocks.initBlocks();
 		GGItems.initItems();
 	}
 	
 	@EventHandler
-	public void postInit()
+	public void postInit(FMLPostInitializationEvent event)
 	{
 		
 	}

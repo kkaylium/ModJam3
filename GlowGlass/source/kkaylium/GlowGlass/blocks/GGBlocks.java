@@ -11,7 +11,7 @@ public class GGBlocks {
 	
 	public static void initBlocks()
 	{
-		GlowGlass_WHITE = new BlockGlowGlass(4000).setUnlocalizedName("WhiteGlowGlass").setCreativeTab(CreativeTabs.tabBlock);
+		GlowGlass_WHITE = new BlockGlowGlass(500).setUnlocalizedName("WhiteGlowGlass").setCreativeTab(CreativeTabs.tabBlock);
 			GameRegistry.registerBlock(GlowGlass_WHITE, "WhiteGlowGlass");
 			LanguageRegistry.addName(GlowGlass_WHITE, "Glow Glass: White");
 		
