@@ -42,9 +42,20 @@ public class ItemGlowCrystal extends Item{
 	}
 	
 	@SideOnly(Side.CLIENT)
+	public Icon getIconFromDamage(int par1)
+	{
+		int i = MathHelper.clamp_int(par1, 0, 1);
+		return this.icons[i];
+	}
+	
+	@SideOnly(Side.CLIENT)
+	@SuppressWarnings({"rawtypes", "unchecked"})
 	public void getSubItems(int par1, CreativeTabs par2CreativeTabs, List par3List)
 	{
-		
+		for(int i = 0; i < 2; i++)
+		{
+			par3List.add(new ItemStack(par1, 1, i));
+		}
 	}
 	
 	@Override
