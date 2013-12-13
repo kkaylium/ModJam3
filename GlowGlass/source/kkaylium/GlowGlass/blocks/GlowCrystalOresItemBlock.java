@@ -25,7 +25,7 @@ public class GlowCrystalOresItemBlock extends ItemBlock{
 		
 		unlocalizedName.append("item.");
 		unlocalizedName.append("glowglass:");
-		unlocalizedName.append("GlowOres");
+		unlocalizedName.append("GlowOre");
 		unlocalizedName.append(BlockGlowGlass.glassNames[meta]);
 		
 		return unlocalizedName.toString();
