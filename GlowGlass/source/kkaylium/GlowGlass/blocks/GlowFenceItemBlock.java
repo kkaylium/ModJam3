@@ -25,7 +25,7 @@ public class GlowFenceItemBlock extends ItemBlock{
 		unlocalizedName.append("glowglass:");
 		unlocalizedName.append("GlowFence");
 		unlocalizedName.append(BlockGlowFence.fenceNames[meta]);
-		
+		//
 		return unlocalizedName.toString();
 	}
 	//@SideOnly(Side.CLIENT)
