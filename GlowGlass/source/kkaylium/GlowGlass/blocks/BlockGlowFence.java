@@ -21,7 +21,7 @@ import net.minecraft.world.World;
 
 public class BlockGlowFence extends BlockFence{
 
-	public static final String[] fenceNames = new String[]{"WHITE", "BLACK"};
+	public static final String[] fenceNames = new String[]{"WHITE", "BLACK", "RED", "ORANGE", "YELLOW", "GREEN", "LIGHTBLUE", "BLUE", "PURPLE", "PINK", "RAINBOW"};
 	@SideOnly(Side.CLIENT)
 	private Icon[] icons;
 	private final String field_94464_a;
@@ -56,6 +56,15 @@ public class BlockGlowFence extends BlockFence{
 	{
 		par3List.add(new ItemStack(par1, 1, 0));
 		par3List.add(new ItemStack(par1, 1, 1));
+		par3List.add(new ItemStack(par1, 1, 2));
+		par3List.add(new ItemStack(par1, 1, 3));
+		par3List.add(new ItemStack(par1, 1, 4));
+		par3List.add(new ItemStack(par1, 1, 5));
+		par3List.add(new ItemStack(par1, 1, 6));
+		par3List.add(new ItemStack(par1, 1, 7));
+		par3List.add(new ItemStack(par1, 1, 8));
+		par3List.add(new ItemStack(par1, 1, 9));
+		par3List.add(new ItemStack(par1, 1, 10));
 	}
 	
 	@SideOnly(Side.CLIENT)
@@ -250,10 +259,10 @@ public class BlockGlowFence extends BlockFence{
 		}
 	}
 	
-	//public static boolean isIdAFence(int par0)
-	//{
-	//	return par0 == Block.fence.blockID || par0 == Block.netherFence.blockID;
-	//}
+	public static boolean isIdAFence(int par0)
+	{
+		return par0 == Block.fence.blockID || par0 == Block.netherFence.blockID;
+	}
 	
 	@SideOnly(Side.CLIENT)
 	public boolean shouldSideBeRendered(IBlockAccess par1IBlockAccess, int par2, int par3, int par4, int par5)

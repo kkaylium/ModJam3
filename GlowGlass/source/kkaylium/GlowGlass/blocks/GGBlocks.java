@@ -48,6 +48,15 @@ public class GGBlocks {
 			GameRegistry.registerBlock(GlowFence, GlowFenceItemBlock.class, "GlowFence");
 			LanguageRegistry.addName(new ItemStack(GlowFence, 1, 0), "Glow Fence: White");
 			LanguageRegistry.addName(new ItemStack(GlowFence, 1, 1), "Glow Fence: Black");
+			LanguageRegistry.addName(new ItemStack(GlowFence, 1, 2), "Glow Glass: Red");
+			LanguageRegistry.addName(new ItemStack(GlowFence, 1, 3), "Glow Glass: Orange");
+			LanguageRegistry.addName(new ItemStack(GlowFence, 1, 4), "Glow Glass: Yellow");
+			LanguageRegistry.addName(new ItemStack(GlowFence, 1, 5), "Glow Glass: Green");
+			LanguageRegistry.addName(new ItemStack(GlowFence, 1, 6), "Glow Glass: Light Blue");
+			LanguageRegistry.addName(new ItemStack(GlowFence, 1, 7), "Glow Glass: Blue");
+			LanguageRegistry.addName(new ItemStack(GlowFence, 1, 8), "Glow Glass: Purple");
+			LanguageRegistry.addName(new ItemStack(GlowFence, 1, 9), "Glow Glass: Pink");
+			LanguageRegistry.addName(new ItemStack(GlowFence, 1, 10), "Glow Glass: Special");
 	}
 
 }
