@@ -10,13 +10,19 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockFence;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.AxisAlignedBB;
+import net.minecraft.util.Icon;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
 public class BlockGlowFence extends BlockFence{
 
+	public static final String[] fenceNames = new String[]{"WHITE", "BLACK"};
+	@SideOnly(Side.CLIENT)
+	private Icon[] icons;
 	private final String field_94464_a;
 	
 	public BlockGlowFence(int par1, String par2String) {
@@ -24,6 +30,41 @@ public class BlockGlowFence extends BlockFence{
 		this.field_94464_a = par2String;
 		this.setCreativeTab(GlowGlass.GGTab);
 		this.setUnlocalizedName("GlowFence");
+		this.setLightValue(1.0F);
+	}
+	
+	@SideOnly(Side.CLIENT)
+	public Icon getIcon(int par1, int par2)
+	{
+		if(par2 < 0 || par2 >= this.icons.length)
+		{
+			par2 = 0;
+		}
+		return this.icons[par2];
+	}
+	
+	public int damageDropped(int par1)
+	{
+		return par1;
+	}
+	
+	@SuppressWarnings({ "rawtypes", "unchecked" })
+	@SideOnly(Side.CLIENT)
+	public void getSubBlocks(int par1, CreativeTabs par2CreativeTabs, List par3List)
+	{
+		par3List.add(new ItemStack(par1, 1, 0));
+		par3List.add(new ItemStack(par1, 1, 1));
+	}
+	
+	@SideOnly(Side.CLIENT)
+	public void registerIcons(IconRegister iconRegister)
+	{
+		this.icons = new Icon[fenceNames.length];
+		
+		for(int i = 0; i < this.icons.length; i++)
+		{
+			this.icons[i] = iconRegister.registerIcon("glowglass:" + this.field_94464_a + fenceNames[i]);
+		}
 	}
 	
 	@SuppressWarnings({"rawtypes"})
@@ -165,9 +206,9 @@ public class BlockGlowFence extends BlockFence{
 		return true;
 	}
 	
-	@SideOnly(Side.CLIENT)
-	public void registerIcons(IconRegister iconRegister)
-	{
-		this.blockIcon = iconRegister.registerIcon(this.field_94464_a);
-	}
+	//@SideOnly(Side.CLIENT)
+	//public void registerIcons(IconRegister iconRegister)
+	//{
+	//	this.blockIcon = iconRegister.registerIcon(this.field_94464_a);
+	//}
 }
