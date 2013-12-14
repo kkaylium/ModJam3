@@ -68,7 +68,7 @@ public class BlockGlowOre extends Block{
 			this.icons[i] = iconRegister.registerIcon("glowglass:" + this.getTextureName() + oreNames[i]);
 		}
 	}
-	
+		
 	public void randomDisplayTick(World world, int par2, int par3, int par4, Random random)
 	{
 		this.sparkle(world, par2, par3, par4);
