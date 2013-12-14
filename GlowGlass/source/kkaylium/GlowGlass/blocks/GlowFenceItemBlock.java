@@ -1,10 +1,7 @@
 package kkaylium.GlowGlass.blocks;
 
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.Icon;
 import net.minecraft.util.MathHelper;
 
 public class GlowFenceItemBlock extends ItemBlock{

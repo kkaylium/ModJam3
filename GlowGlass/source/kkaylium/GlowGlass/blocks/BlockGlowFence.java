@@ -34,7 +34,6 @@ public class BlockGlowFence extends BlockFence{
 	}
 	
 	@SideOnly(Side.CLIENT)
-	@Override
 	public Icon getIcon(int par1, int par2)
 	{
 		if(par2 < 0 || par2 >= this.icons.length)
