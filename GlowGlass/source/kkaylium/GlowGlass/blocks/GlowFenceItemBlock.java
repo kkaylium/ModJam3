@@ -1,7 +1,10 @@
 package kkaylium.GlowGlass.blocks;
 
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.Icon;
 import net.minecraft.util.MathHelper;
 
 public class GlowFenceItemBlock extends ItemBlock{
@@ -19,7 +22,7 @@ public class GlowFenceItemBlock extends ItemBlock{
 	public String getUnlocalizedName(ItemStack itemStack)
 	{
 		StringBuilder unlocalizedName = new StringBuilder();
-		int meta = MathHelper.clamp_int(itemStack.getItemDamage(), 0, 10);
+		int meta = MathHelper.clamp_int(itemStack.getItemDamage(), 0, 1);
 		
 		unlocalizedName.append("item.");
 		unlocalizedName.append("glowglass:");
@@ -28,4 +31,10 @@ public class GlowFenceItemBlock extends ItemBlock{
 		
 		return unlocalizedName.toString();
 	}
+	//@SideOnly(Side.CLIENT)
+	//@Override
+	//public Icon getIconFromDamage(int metadata)
+	//{
+	//	return GGBlocks.GlowFence.getIcon(0, metadata);
+	//}
 }

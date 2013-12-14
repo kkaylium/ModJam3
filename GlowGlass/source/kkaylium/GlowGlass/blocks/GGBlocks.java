@@ -47,7 +47,7 @@ public class GGBlocks {
 		GlowFence = new BlockGlowFence(503, "GlowFence");
 			GameRegistry.registerBlock(GlowFence, GlowFenceItemBlock.class, "GlowFence");
 			LanguageRegistry.addName(new ItemStack(GlowFence, 1, 0), "Glow Fence: White");
-			LanguageRegistry.addName(new ItemStack(GlowFence, 1, 0), "Glow Fence: Black");
+			LanguageRegistry.addName(new ItemStack(GlowFence, 1, 1), "Glow Fence: Black");
 	}
 
 }
