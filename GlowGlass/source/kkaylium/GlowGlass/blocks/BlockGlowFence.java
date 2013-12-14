@@ -7,6 +7,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 import kkaylium.GlowGlass.GlowGlass;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockFence;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.entity.Entity;
@@ -14,14 +15,15 @@ import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-public class BlockGlowFence extends Block{
+public class BlockGlowFence extends BlockFence{
 
 	private final String field_94464_a;
 	
 	public BlockGlowFence(int par1, String par2String) {
-		super(par1, Material.glass);
-		this.setCreativeTab(GlowGlass.GGTab);
+		super(par1, par2String, Material.glass);
 		this.field_94464_a = par2String;
+		this.setCreativeTab(GlowGlass.GGTab);
+		this.setUnlocalizedName("GlowFence");
 	}
 	
 	@SuppressWarnings({"rawtypes"})
@@ -139,17 +141,17 @@ public class BlockGlowFence extends Block{
 	
 	public boolean canConnectFenceTo(IBlockAccess par1BlockAccess, int par2, int par3, int par4)
 	{
-		//int l = par1BlockAccess.getBlockId(par2, par3, par4);
+		int l = par1BlockAccess.getBlockId(par2, par3, par4);
 		
-		//if(l != this.blockID && l != Block.fenceGate.blockID)
-		//{
-			//Block block = Block.blocksList[l];
-			//return block != null && block.blockMaterial.isOpaque() && block.renderAsNormalBlock() ? block.blockMaterial != Material.pumpkin : false;
-		//}
-		//else
-		//{
+		if(l != this.blockID && l != Block.fenceGate.blockID)
+		{
+			Block block = Block.blocksList[l];
+			return block != null && block.blockMaterial.isOpaque() && block.renderAsNormalBlock() ? block.blockMaterial != Material.pumpkin : false;
+		}
+	    else
+		{
 			return true;
-		//}
+		}
 	}
 	
 	//public static boolean isIdAFence(int par0)
@@ -158,7 +160,7 @@ public class BlockGlowFence extends Block{
 	//}
 	
 	@SideOnly(Side.CLIENT)
-	public boolean shoudlSideBeRendered(IBlockAccess par1IBlockAccess, int par2, int par3, int par4, int par5)
+	public boolean shouldSideBeRendered(IBlockAccess par1IBlockAccess, int par2, int par3, int par4, int par5)
 	{
 		return true;
 	}
