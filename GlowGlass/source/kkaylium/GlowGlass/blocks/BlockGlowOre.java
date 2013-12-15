@@ -41,7 +41,22 @@ public class BlockGlowOre extends Block{
 	
 	public int IdDropped(int par1, Random par2Random, int par3)
 	{
-		
+		int blockMeta = 0;
+		this.icons = new Icon[oreNames.length];
+		if(this.damageDropped(0) == 0)
+		{
+			blockMeta = 0;
+		}else if(this.damageDropped(0) == 1)
+		{
+			blockMeta = 1;
+		}else if(this.damageDropped(0) == 2)
+		{
+			blockMeta = 2;
+		}else if(this.damageDropped(0) == 3)
+		{
+			blockMeta = 3;
+		}
+		GGItems.glowCrystal.getMetadata(blockMeta);
 		return 0;
 	}
 	
