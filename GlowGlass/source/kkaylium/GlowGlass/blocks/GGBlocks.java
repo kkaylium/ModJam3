@@ -165,6 +165,15 @@ public class GGBlocks {
 		*/	
 			GlowGateTemp = new GGGateSuperType(600, "GlowFence").setUnlocalizedName("GlowGateSPECIAL");
 			GameRegistry.registerBlock(GlowGateTemp, "GlowGameSPECIAL");
+			LanguageRegistry.addName(new ItemStack(GlowGateTemp, 1, 0), "Glow Ore: White");
+			LanguageRegistry.addName(new ItemStack(GlowGateTemp, 1, 1), "Glow Ore: Black");
+			LanguageRegistry.addName(new ItemStack(GlowGateTemp, 1, 2), "Glow Ore: Red");
+			LanguageRegistry.addName(new ItemStack(GlowGateTemp, 1, 3), "Glow Ore: Orange");
+			LanguageRegistry.addName(new ItemStack(GlowGateTemp, 1, 4), "Glow Ore: Yellow");
+			LanguageRegistry.addName(new ItemStack(GlowGateTemp, 1, 5), "Glow Ore: Green");
+			LanguageRegistry.addName(new ItemStack(GlowGateTemp, 1, 6), "Glow Ore: Blue");
+			LanguageRegistry.addName(new ItemStack(GlowGateTemp, 1, 7), "Glow Ore: Purple");
+			LanguageRegistry.addName(new ItemStack(GlowGateTemp, 1, 8), "Glow Ore: Pink");
 			LanguageRegistry.addName(new ItemStack(GlowGateTemp, 1, 9), "Glow Gate: Pink");
 			LanguageRegistry.addName(new ItemStack(GlowGateTemp, 1, 10), "Glow Gate: Special");
 			
