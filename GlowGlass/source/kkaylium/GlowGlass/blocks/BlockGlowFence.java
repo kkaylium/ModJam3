@@ -32,8 +32,14 @@ public class BlockGlowFence extends BlockFence{
 		this.field_94464_a = par2String;
 		this.setCreativeTab(GlowGlass.GGTab);
 		this.setLightValue(1.0F);
+		//this.setTextureName("glowglass:"+ this.getUnlocalizedName());
 	}
-	
+	@Override
+	@SideOnly(Side.CLIENT)
+	public void registerIcons(IconRegister par1IconRegister)
+    {
+        this.blockIcon = par1IconRegister.registerIcon("glowglass:"+this.field_94464_a);
+    }
 	//@SideOnly(Side.CLIENT)
 	//@Override
 	//public Icon getIcon(int par1, int par2)
@@ -78,13 +84,6 @@ public class BlockGlowFence extends BlockFence{
 			this.icons[i] = iconRegister.registerIcon("glowglass:" + this.field_94464_a + fenceNames[i]);
 		}
 	}*/
-	@Override
-	@SideOnly(Side.CLIENT)
-	public void registerIcons(IconRegister iconRegister)
-	{
-		iconRegister.registerIcon("glowglass:" + this.field_94464_a);
-		
-	}
 	
 	//public void randomDisplayTick(World world, int par2, int par3, int par4, Random random)
 	//{
@@ -263,7 +262,7 @@ public class BlockGlowFence extends BlockFence{
 	{
 		int l = par1BlockAccess.getBlockId(par2, par3, par4);
 		
-		if(l != this.blockID && l != Block.fenceGate.blockID)
+		if(l != this.blockID && l != Block.fenceGate.blockID && l != GGBlocks.GlowFenceBLACKDefaultID)
 		{
 			Block block = Block.blocksList[l];
 			return block != null && block.blockMaterial.isOpaque() && block.renderAsNormalBlock() ? block.blockMaterial != Material.pumpkin : false;
@@ -285,9 +284,4 @@ public class BlockGlowFence extends BlockFence{
 		return true;
 	}
 	
-	//@SideOnly(Side.CLIENT)
-	//public void registerIcons(IconRegister iconRegister)
-	//{
-	//	this.blockIcon = iconRegister.registerIcon(this.field_94464_a);
-	//}
 }
