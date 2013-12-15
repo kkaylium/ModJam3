@@ -1,9 +1,9 @@
 package kkaylium.GlowGlass;
 
-import net.minecraft.creativetab.CreativeTabs;
 import kkaylium.GlowGlass.blocks.GGBlocks;
-import kkaylium.GlowGlass.gen.GGNormalWorldGen;
+import kkaylium.GlowGlass.gen.GGBiomeOreGen;
 import kkaylium.GlowGlass.items.GGItems;
+import net.minecraft.creativetab.CreativeTabs;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -32,8 +32,8 @@ public class GlowGlass
 	{
 		GGBlocks.initBlocks();
 		GGItems.initItems();
-		
-		GameRegistry.registerWorldGenerator(new GGNormalWorldGen());
+	
+		GameRegistry.registerWorldGenerator(new GGBiomeOreGen());
 	}
 	
 	@EventHandler
