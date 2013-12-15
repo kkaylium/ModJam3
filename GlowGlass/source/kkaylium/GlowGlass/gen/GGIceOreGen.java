@@ -4,17 +4,13 @@ import java.util.LinkedList;
 import java.util.Random;
 
 import kkaylium.GlowGlass.blocks.GGBlocks;
-
 import net.minecraft.block.Block;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
-import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.chunk.IChunkProvider;
-import net.minecraftforge.common.BiomeDictionary;
 import cpw.mods.fml.common.IWorldGenerator;
 
-public class GGBiomeOreGen implements IWorldGenerator{
-
+public class GGIceOreGen implements IWorldGenerator {
 	public class OreInfo
 	{
 		public int maxHeight;
@@ -24,9 +20,8 @@ public class GGBiomeOreGen implements IWorldGenerator{
 		public int clusterPerChunk;
 		public int oreType;
 		public int metaOre;
-		public BiomeGenBase spawnBiome;
 		
-		public OreInfo(int MaxHeight, int MinHeight, int MaxCluster, int MinCluster, int PerChunk, int OreType, BiomeGenBase spawnBiome)
+		public OreInfo(int MaxHeight, int MinHeight, int MaxCluster, int MinCluster, int PerChunk, int OreType)
 		{
 			maxHeight = MaxHeight;
 			minHeight = MinHeight;
@@ -34,18 +29,17 @@ public class GGBiomeOreGen implements IWorldGenerator{
 			minCluster = MinCluster;
 			clusterPerChunk = PerChunk;
 			oreType = OreType;
-			this.spawnBiome = spawnBiome;
 		}
 	}
 	
 	private LinkedList<OreInfo> oreList;
 	
-	public GGBiomeOreGen()
+	public GGIceOreGen()
 	{
 		oreList = new LinkedList<OreInfo>();
 		OreInfo info;
 		
-		info = new OreInfo(40, 0, 10, 2, 2, GGBlocks.GlowOre.blockID, BiomeGenBase.desert);
+		info = new OreInfo(100, 40, 5, 2, 10, GGBlocks.GlowIceOre.blockID);
 		oreList.add(info);
 		
 	}
@@ -81,7 +75,6 @@ public class GGBiomeOreGen implements IWorldGenerator{
         		 y = y + info.minHeight;
         		 numOre = MathHelper.clamp_int(random.nextInt(info.maxCluster), info.minCluster, info.maxCluster);
         		 
-        		 if (info.spawnBiome == null ||(info.spawnBiome != null && world.getBiomeGenForCoords(x, z).equals(info.spawnBiome)));
         		 generateOre(world, random, x, y, z, info.oreType, numOre);
         		 
         	 }
@@ -97,7 +90,7 @@ public class GGBiomeOreGen implements IWorldGenerator{
 		lz = z;
 		int id;
 		id = world.getBlockId(x, y, z);
-		if(id != Block.stone.blockID)
+		if(id != Block.ice.blockID)
 		{
 			return;
 		}
@@ -105,7 +98,7 @@ public class GGBiomeOreGen implements IWorldGenerator{
 		{
 			id = world.getBlockId(lx, ly, lz);
 			
-			world.setBlock(lx, ly, lz, blockID, 4, 2);
+			world.setBlock(lx, ly, lz, blockID);
 			switch (random.nextInt(3))
 			{
 			case 0:
@@ -122,3 +115,5 @@ public class GGBiomeOreGen implements IWorldGenerator{
 	}
 
 }
+
+
