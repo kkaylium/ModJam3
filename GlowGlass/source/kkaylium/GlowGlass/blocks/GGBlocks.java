@@ -2,6 +2,7 @@ package kkaylium.GlowGlass.blocks;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.common.MinecraftForge;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
@@ -63,6 +64,7 @@ public class GGBlocks {
 			LanguageRegistry.addName(new ItemStack(GlowOre, 1, 6), "Glow Ore: Blue");
 			LanguageRegistry.addName(new ItemStack(GlowOre, 1, 7), "Glow Ore: Purple");
 			LanguageRegistry.addName(new ItemStack(GlowOre, 1, 8), "Glow Ore: Pink");
+			MinecraftForge.setBlockHarvestLevel(GlowOre, "pickaxe", 2);
 			
 		//GlowIceOre = new GlowIceOre(504);
 			//GameRegistry.registerBlock(GlowIceOre, "GlowIceOre");

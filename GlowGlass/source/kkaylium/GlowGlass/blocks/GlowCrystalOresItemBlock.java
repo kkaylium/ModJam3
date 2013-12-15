@@ -8,6 +8,8 @@ public class GlowCrystalOresItemBlock extends ItemBlock{
 
 	public GlowCrystalOresItemBlock(int par1) {
 		super(par1);
+		this.setHasSubtypes(true);
+		
 		
 	}
 	

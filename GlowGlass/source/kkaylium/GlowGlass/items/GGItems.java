@@ -21,10 +21,10 @@ public class GGItems {
 		LanguageRegistry.addName(new ItemStack(glowCrystal, 1, 3), "Glow Crystal: Orange");
 		LanguageRegistry.addName(new ItemStack(glowCrystal, 1, 4), "Glow Crystal: Yellow");
 		LanguageRegistry.addName(new ItemStack(glowCrystal, 1, 5), "Glow Crystal: Green");
-		LanguageRegistry.addName(new ItemStack(glowCrystal, 1, 6), "Glow Crystal: Light Blue");
-		LanguageRegistry.addName(new ItemStack(glowCrystal, 1, 7), "Glow Crystal: Blue");
-		LanguageRegistry.addName(new ItemStack(glowCrystal, 1, 8), "Glow Crystal: Purple");
-		LanguageRegistry.addName(new ItemStack(glowCrystal, 1, 9), "Glow Crystal: Pink");
+		LanguageRegistry.addName(new ItemStack(glowCrystal, 1, 6), "Glow Crystal: Blue");
+		LanguageRegistry.addName(new ItemStack(glowCrystal, 1, 7), "Glow Crystal: Purple");
+		LanguageRegistry.addName(new ItemStack(glowCrystal, 1, 8), "Glow Crystal: Pink");
+		LanguageRegistry.addName(new ItemStack(glowCrystal, 1, 9), "Glow Crystal: Light Blue");
 		LanguageRegistry.addName(new ItemStack(glowCrystal, 1, 10), "Glow Crystal: Special");
 		
 	}

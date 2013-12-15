@@ -15,7 +15,7 @@ import net.minecraft.util.MathHelper;
 
 public class ItemGlowCrystal extends Item{
 
-	private String[] crystalNames = new String[] {"WHITE", "BLACK", "RED", "ORANGE", "YELLOW", "GREEN", "LIGHTBLUE", "BLUE", "PURPLE", "PINK", "SPECIAL"};
+	private String[] crystalNames = new String[] {"WHITE", "BLACK", "RED", "ORANGE", "YELLOW", "GREEN", "BLUE", "PURPLE", "PINK", "LIGHTBLUE", "SPECIAL"};
 	
 	@SideOnly(Side.CLIENT)
 	private Icon[] icons;

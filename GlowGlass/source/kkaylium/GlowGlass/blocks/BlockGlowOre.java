@@ -26,6 +26,7 @@ public class BlockGlowOre extends Block{
 		this.setTextureName("GlowOre");
 		this.setCreativeTab(GlowGlass.GGTab);
 		this.setLightValue(0.1F);
+		this.setHardness(0.3F);
 		this.setTickRandomly(true);
 	}
 	
@@ -39,27 +40,20 @@ public class BlockGlowOre extends Block{
 		return this.icons[par2];
 	}
 	
-	public int IdDropped(int par1, Random par2Random, int par3)
+	@Override
+	public int idDropped(int par1, Random par2Random, int par3)
 	{
-		int blockMeta = 0;
-		this.icons = new Icon[oreNames.length];
-		if(this.damageDropped(0) == 0)
+		switch (par3)
 		{
-			blockMeta = 0;
-		}else if(this.damageDropped(0) == 1)
-		{
-			blockMeta = 1;
-		}else if(this.damageDropped(0) == 2)
-		{
-			blockMeta = 2;
-		}else if(this.damageDropped(0) == 3)
-		{
-			blockMeta = 3;
-		}
-		GGItems.glowCrystal.getMetadata(blockMeta);
-		return 0;
+		case 0:
+			return GGItems.glowCrystal.itemID;
+		default:
+			return GGItems.glowCrystal.itemID;
+		}		
 	}
-	
+		
+	//public IdDroppedWithMetadata()
+	@Override
 	public int damageDropped(int par1)
 	{
 		return par1;
