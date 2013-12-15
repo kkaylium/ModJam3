@@ -1,0 +1,12 @@
+[
+{
+"modid": "glowglass",
+"name": "Glow Glass",
+"description": "An aesthetic mod with glowing, colored glass and glowing, colored, see through fences :D",
+"version": "0.0.001",
+"credits": "Created By: Kkaylium",
+"mcversion": "1.6.4",
+"authors": ["Kkaylium", "Help from Others :D"],
+"dependencies": ["Minecraft Forge"]
+}
+]

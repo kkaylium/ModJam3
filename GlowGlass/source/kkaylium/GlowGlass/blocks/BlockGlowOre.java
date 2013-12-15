@@ -116,7 +116,40 @@ public class BlockGlowOre extends Block{
 			
 			if (d1 < (double)par2 || d1 > (double)(par2 + 1) || d2 < 0.0D || d2 > (double)(par3 + 1) || d3 < (double)par4 || d3 > (double)(par4 + 1))
 			{
-				world.spawnParticle("reddust", d1, d2, d3, 0.7D, 0.9D, 1.0D);
+				switch(oreNames.length)
+				{
+				case 0:
+					world.spawnParticle("reddust", d1, d2, d3, 0.7D, 0.9D, 1.0D);
+					break;
+				case 1:
+					world.spawnParticle("reddust", d1, d2, d3, 0.0D, 0.0D, 0.0D);
+					break;
+				case 2:
+					world.spawnParticle("reddust", d1, d2, d3, 1.0D, 0.0D, 0.0D);
+					break;
+				case 3:
+					world.spawnParticle("reddust", d1, d2, d3, 0.9D, 0.2D, 0.0D);
+					break;
+				case 4:
+					world.spawnParticle("reddust", d1, d2, d3, 0.8D, 0.4D, 0.1D);
+					break;
+				case 5:
+					world.spawnParticle("reddust", d1, d2, d3, 0.5D, 1.0D, 0.4D);
+					break;
+				case 6:
+					world.spawnParticle("reddust", d1, d2, d3, 0.3D, 0.7D, 0.5D);
+					break;
+				case 7:
+					world.spawnParticle("reddust", d1, d2, d3, 0.1D, 0.0D, 0.0D);
+					break;
+				case 8:
+					world.spawnParticle("reddust", d1, d2, d3, 0.7D, 0.9D, 1.0D);
+					break;
+				default:
+					world.spawnParticle("reddust", d1, d2, d3, 0.7D, 0.9D, 1.0D);	
+					break;
+				}
+				
 			}
 			
 		}

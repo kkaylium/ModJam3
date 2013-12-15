@@ -21,36 +21,35 @@ import net.minecraft.world.World;
 
 public class BlockGlowFence extends BlockFence{
 
-	public static final String[] fenceNames = new String[]{"WHITE", "BLACK", "RED", "ORANGE", "YELLOW", "GREEN", "LIGHTBLUE", "BLUE", "PURPLE", "PINK", "RAINBOW"};
-	@SideOnly(Side.CLIENT)
-	private Icon[] icons;
+	//public static final String[] fenceNames = new String[]{"WHITE", "BLACK", "RED", "ORANGE", "YELLOW", "GREEN", "LIGHTBLUE", "BLUE", "PURPLE", "PINK", "RAINBOW"};
+	//@SideOnly(Side.CLIENT)
+	//private Icon[] icons;
 	private final String field_94464_a;
 	
-	public BlockGlowFence(int par1, String par2String) {
+	public BlockGlowFence(int par1, String par2String) 
+	{
 		super(par1, par2String, Material.glass);
 		this.field_94464_a = par2String;
 		this.setCreativeTab(GlowGlass.GGTab);
-		this.setUnlocalizedName("GlowFence");
-		this.setTickRandomly(true);
 		this.setLightValue(1.0F);
 	}
 	
-	@SideOnly(Side.CLIENT)
-	@Override
-	public Icon getIcon(int par1, int par2)
-	{
-		if(par2 < 0 || par2 >= this.icons.length)
-		{
-			par2 = 0;
-		}
-		return this.icons[par2];
-	}
+	//@SideOnly(Side.CLIENT)
+	//@Override
+	//public Icon getIcon(int par1, int par2)
+	//{
+	//	if(par2 < 0 || par2 >= this.icons.length)
+	//	{
+	//		par2 = 0;
+	//	}
+	//	return this.icons[par2];
+	//}
 	
-	public int damageDropped(int par1)
-	{
-		return par1;
-	}
-	
+	//public int damageDropped(int par1)
+	//{
+	//	return par1;
+	//}
+	/*
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	@SideOnly(Side.CLIENT)
 	public void getSubBlocks(int par1, CreativeTabs par2CreativeTabs, List par3List)
@@ -67,8 +66,8 @@ public class BlockGlowFence extends BlockFence{
 		par3List.add(new ItemStack(par1, 1, 9));
 		par3List.add(new ItemStack(par1, 1, 10));
 	}
-	
-	@Override
+	*/
+	/*@Override
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IconRegister iconRegister)
 	{
@@ -78,12 +77,19 @@ public class BlockGlowFence extends BlockFence{
 		{
 			this.icons[i] = iconRegister.registerIcon("glowglass:" + this.field_94464_a + fenceNames[i]);
 		}
+	}*/
+	@Override
+	@SideOnly(Side.CLIENT)
+	public void registerIcons(IconRegister iconRegister)
+	{
+		iconRegister.registerIcon("glowglass:" + this.field_94464_a);
+		
 	}
 	
-	public void randomDisplayTick(World world, int par2, int par3, int par4, Random random)
-	{
-		this.sparkle(world, par2, par3, par4);
-	}
+	//public void randomDisplayTick(World world, int par2, int par3, int par4, Random random)
+	//{
+	//	this.sparkle(world, par2, par3, par4);
+	//}
 	
 	private void sparkle(World world, int par2, int par3, int par4)
 	{
@@ -236,6 +242,12 @@ public class BlockGlowFence extends BlockFence{
 	{
 		return false;
 	}
+	
+	@SideOnly(Side.CLIENT)
+    public int getRenderBlockPass()
+    {
+        return 1;
+    }
 	
 	public boolean getBlocksMovement(IBlockAccess par1BlockAccess, int par2, int par3, int par4)
 	{
