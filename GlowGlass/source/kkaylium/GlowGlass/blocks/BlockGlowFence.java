@@ -36,6 +36,7 @@ public class BlockGlowFence extends BlockFence{
 	}
 	
 	@SideOnly(Side.CLIENT)
+	@Override
 	public Icon getIcon(int par1, int par2)
 	{
 		if(par2 < 0 || par2 >= this.icons.length)
@@ -67,6 +68,7 @@ public class BlockGlowFence extends BlockFence{
 		par3List.add(new ItemStack(par1, 1, 10));
 	}
 	
+	@Override
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IconRegister iconRegister)
 	{
@@ -175,6 +177,7 @@ public class BlockGlowFence extends BlockFence{
 		if (flag2 || flag3 || !flag && !flag1)
 		{
 			this.setBlockBounds(f, 0.0F, f2, f1, 1.5F, f3);
+			super.addCollisionBoxesToList(par1World, par2, par3, par4, par5AxisAlignedBB, par6List, par7Entity);
 		}
 		
 		if (flag)

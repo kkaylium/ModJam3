@@ -28,10 +28,12 @@ public class GlowFenceItemBlock extends ItemBlock{
 		//
 		return unlocalizedName.toString();
 	}
+	
 	//@SideOnly(Side.CLIENT)
 	//@Override
 	//public Icon getIconFromDamage(int metadata)
 	//{
+		
 	//	return GGBlocks.GlowFence.getIcon(0, metadata);
 	//}
 }

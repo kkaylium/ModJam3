@@ -44,6 +44,7 @@ public class GGBiomeOreGen implements IWorldGenerator{
 	{
 		oreList = new LinkedList<OreInfo>();
 		OreInfo info;
+		
 		//Desert
 		info = new OreInfo(40, 0, 10, 2, 2, GGBlocks.GlowOre.blockID, 2, BiomeGenBase.desert);
 		oreList.add(info);
@@ -53,21 +54,25 @@ public class GGBiomeOreGen implements IWorldGenerator{
 		
 		info = new OreInfo(40, 0, 10, 2, 2, GGBlocks.GlowOre.blockID, 4, BiomeGenBase.desert);
 		oreList.add(info);
+		
 		//Forest/Jungle
 		info = new OreInfo(40, 0, 10, 2, 2, GGBlocks.GlowOre.blockID, 5, BiomeGenBase.forest);
 		oreList.add(info);
 		
 		info = new OreInfo(40, 0, 10, 2, 2, GGBlocks.GlowOre.blockID, 5, BiomeGenBase.jungle);
 		oreList.add(info);
+		
 		//SnowBiomes
 		info = new OreInfo(40, 0, 10, 2, 2, GGBlocks.GlowOre.blockID, 6, BiomeGenBase.taiga);
 		oreList.add(info);
+		
 		//Plains
 		info = new OreInfo(40, 0, 10, 2, 2, GGBlocks.GlowOre.blockID, 7, BiomeGenBase.plains);
 		oreList.add(info);
 		
 		info = new OreInfo(40, 0, 10, 2, 2, GGBlocks.GlowOre.blockID, 8, BiomeGenBase.plains);
 		oreList.add(info);
+		
 		//extreme hills
 		info = new OreInfo(40, 0, 10, 2, 2, GGBlocks.GlowOre.blockID, 0, BiomeGenBase.extremeHills);
 		oreList.add(info);
