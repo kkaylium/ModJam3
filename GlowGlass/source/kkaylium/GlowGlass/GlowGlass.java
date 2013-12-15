@@ -4,7 +4,9 @@ import kkaylium.GlowGlass.blocks.GGBlocks;
 import kkaylium.GlowGlass.gen.GGBiomeOreGen;
 import kkaylium.GlowGlass.items.GGItems;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.Configuration;
+import net.minecraftforge.oredict.OreDictionary;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -62,7 +64,7 @@ public class GlowGlass
 	@EventHandler
 	public void load(FMLInitializationEvent event)
 	{
-		
+		OreDictionary.registerOre(GGBlocks.GlowOre.getUnlocalizedName(), new ItemStack(GGItems.glowCrystal));
 	}
 	
 	@EventHandler
