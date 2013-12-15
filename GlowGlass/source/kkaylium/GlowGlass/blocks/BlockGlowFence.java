@@ -258,11 +258,12 @@ public class BlockGlowFence extends BlockFence{
 		return 11;
 	}
 	
+	@Override
 	public boolean canConnectFenceTo(IBlockAccess par1BlockAccess, int par2, int par3, int par4)
 	{
 		int l = par1BlockAccess.getBlockId(par2, par3, par4);
 		
-		if(l != this.blockID && l != Block.fenceGate.blockID && l != GGBlocks.GlowFenceBLACKDefaultID)
+		if(l != this.blockID && l != Block.fenceGate.blockID)
 		{
 			Block block = Block.blocksList[l];
 			return block != null && block.blockMaterial.isOpaque() && block.renderAsNormalBlock() ? block.blockMaterial != Material.pumpkin : false;
@@ -272,12 +273,12 @@ public class BlockGlowFence extends BlockFence{
 			return true;
 		}
 	}
-	
+	/*
 	public static boolean isIdAFence(int par0)
 	{
 		return par0 == Block.fence.blockID || par0 == Block.netherFence.blockID;
 	}
-	
+	*/
 	@SideOnly(Side.CLIENT)
 	public boolean shouldSideBeRendered(IBlockAccess par1IBlockAccess, int par2, int par3, int par4, int par5)
 	{
