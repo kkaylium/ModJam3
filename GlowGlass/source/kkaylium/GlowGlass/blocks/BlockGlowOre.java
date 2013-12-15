@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Random;
 
 import kkaylium.GlowGlass.GlowGlass;
+import kkaylium.GlowGlass.items.GGItems;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
@@ -36,6 +37,12 @@ public class BlockGlowOre extends Block{
 			par2 = 0;
 		}
 		return this.icons[par2];
+	}
+	
+	public int IdDropped(int par1, Random par2Random, int par3)
+	{
+		
+		return 0;
 	}
 	
 	public int damageDropped(int par1)
@@ -78,7 +85,7 @@ public class BlockGlowOre extends Block{
 	{
 		Random random = world.rand;
 		double d0 = 0.0625D;
-		for(int i = 0; i < 6; i++)
+		for(int i = 0; i < 1; i++)
 		{
 			double d1 = (double)((float)par2 + random.nextFloat());
 			double d2 = (double)((float)par3 + random.nextFloat());
