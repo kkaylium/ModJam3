@@ -34,6 +34,7 @@ public class GGBlocks {
 	public static Block GlowGatePURPLE;
 	public static Block GlowGatePINK;
 	public static Block GlowGateSPECIAL;
+	public static Block GlowGateTemp;
 	
 	public static int GlowGlassDefaultID;
 	public static int GlowOreDefaultID;
@@ -126,7 +127,7 @@ public class GGBlocks {
 		GlowFenceSPECIAL = new BlockGlowFence(GlowFenceSPECIALDefaultID, "GlowFenceRAINBOW").setUnlocalizedName("GlowFenceRAINBOW");
 			GameRegistry.registerBlock(GlowFenceSPECIAL, "GlowFenceRAINBOW");
 			LanguageRegistry.addName(GlowFenceSPECIAL, "Glow Glass: Special");
-			
+		/*	
 			//Gates
 		GlowGateWHITE = new BlockGlowGate(GlowGateWHITEDefaultID).setUnlocalizedName("GlowGateWHITE");
 			GameRegistry.registerBlock(GlowGateWHITE, "GlowGateWHITE");
@@ -161,6 +162,11 @@ public class GGBlocks {
 		GlowGateSPECIAL = new BlockGlowGate(GlowGateSPECIALDefaultID).setUnlocalizedName("GlowGateRAINBOW");
 			GameRegistry.registerBlock(GlowGateSPECIAL, "GlowGateRAINBOW");
 			LanguageRegistry.addName(GlowGateSPECIAL, "Glow Glass: Special");
+		*/	
+			GlowGateTemp = new GGGateSuperType(600, "GlowFence").setUnlocalizedName("GlowGateSPECIAL");
+			GameRegistry.registerBlock(GlowGateTemp, "GlowGameSPECIAL");
+			LanguageRegistry.addName(new ItemStack(GlowGateTemp, 1, 9), "Glow Gate: Pink");
+			LanguageRegistry.addName(new ItemStack(GlowGateTemp, 1, 10), "Glow Gate: Special");
 			
 	}
 
