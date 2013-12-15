@@ -50,6 +50,17 @@ public class GlowGlass
 		GGBlocks.GlowFencePURPLEDefaultID = config.getBlock("Glow Fence Purple", 510).getInt();
 		GGBlocks.GlowFencePINKDefaultID = config.getBlock("Glow Fence Pink", 511).getInt();
 		GGBlocks.GlowFenceSPECIALDefaultID = config.getBlock("Glow Fence Special", 512).getInt();
+		GGBlocks.GlowGateWHITEDefaultID = config.getBlock("Glow Gate White", 513).getInt();
+		GGBlocks.GlowGateBLACKDefaultID = config.getBlock("Glow Gate Black", 514).getInt();
+		GGBlocks.GlowGateREDDefaultID = config.getBlock("Glow Gate Red", 515).getInt();
+		GGBlocks.GlowGateORANGEDefaultID = config.getBlock("Glow Gate Orange", 516).getInt();
+		GGBlocks.GlowGateYELLOWDefaultID = config.getBlock("Glow Gate Yellow", 517).getInt();
+		GGBlocks.GlowGateGREENDefaultID = config.getBlock("Glow Gate Green", 518).getInt();
+		GGBlocks.GlowGateLIGHTBLUEDefaultID = config.getBlock("Glow Gate Light Blue", 519).getInt();
+		GGBlocks.GlowGateBLUEDefaultID = config.getBlock("Glow Gate Blue", 520).getInt();
+		GGBlocks.GlowGatePURPLEDefaultID = config.getBlock("Glow Gate Purple", 521).getInt();
+		GGBlocks.GlowGatePINKDefaultID = config.getBlock("Glow Gate Pink", 522).getInt();
+		GGBlocks.GlowGateSPECIALDefaultID = config.getBlock("Glow Gate Special", 523).getInt();
 		
 		GGItems.GlowCrystalDefaultID = config.getItem("Glow Crystal", 1000).getInt();
 		

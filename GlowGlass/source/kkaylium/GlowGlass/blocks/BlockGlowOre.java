@@ -26,7 +26,9 @@ public class BlockGlowOre extends Block{
 		this.setTextureName("GlowOre");
 		this.setCreativeTab(GlowGlass.GGTab);
 		this.setLightValue(0.1F);
-		this.setHardness(0.3F);
+		this.setHardness(1.6F);
+		this.setResistance(10.0F);
+		this.setStepSound(soundStoneFootstep);
 		this.setTickRandomly(true);
 	}
 	
@@ -51,12 +53,28 @@ public class BlockGlowOre extends Block{
 			return GGItems.glowCrystal.itemID;
 		}		
 	}
-		
-	//public IdDroppedWithMetadata()
+	
 	@Override
 	public int damageDropped(int par1)
 	{
 		return par1;
+	}
+	
+	@Override
+	public int quantityDropped(Random random)
+	{
+		return 3 + random.nextInt(3);
+	}
+	
+	public int quantityDroppedWithBonus(int par1, Random par2Random)
+    {
+        return this.quantityDropped(par2Random) + par2Random.nextInt(par1 + 1);
+    }
+	
+	@Override
+	public boolean canSilkHarvest()
+	{
+		return true;
 	}
 	
 	@SideOnly(Side.CLIENT)
