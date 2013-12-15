@@ -10,7 +10,6 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.chunk.IChunkProvider;
-import net.minecraftforge.common.BiomeDictionary;
 import cpw.mods.fml.common.IWorldGenerator;
 
 public class GGBiomeOreGen implements IWorldGenerator{
@@ -26,7 +25,7 @@ public class GGBiomeOreGen implements IWorldGenerator{
 		public int metaOre;
 		public BiomeGenBase spawnBiome;
 		
-		public OreInfo(int MaxHeight, int MinHeight, int MaxCluster, int MinCluster, int PerChunk, int OreType, BiomeGenBase spawnBiome)
+		public OreInfo(int MaxHeight, int MinHeight, int MaxCluster, int MinCluster, int PerChunk, int OreType, int OreMetadata, BiomeGenBase spawnBiome)
 		{
 			maxHeight = MaxHeight;
 			minHeight = MinHeight;
@@ -34,6 +33,7 @@ public class GGBiomeOreGen implements IWorldGenerator{
 			minCluster = MinCluster;
 			clusterPerChunk = PerChunk;
 			oreType = OreType;
+			metaOre = OreMetadata;
 			this.spawnBiome = spawnBiome;
 		}
 	}
@@ -44,10 +44,36 @@ public class GGBiomeOreGen implements IWorldGenerator{
 	{
 		oreList = new LinkedList<OreInfo>();
 		OreInfo info;
-		
-		info = new OreInfo(40, 0, 10, 2, 2, GGBlocks.GlowOre.blockID, BiomeGenBase.desert);
+		//Desert
+		info = new OreInfo(40, 0, 10, 2, 2, GGBlocks.GlowOre.blockID, 2, BiomeGenBase.desert);
 		oreList.add(info);
 		
+		info = new OreInfo(40, 0, 10, 2, 2, GGBlocks.GlowOre.blockID, 3, BiomeGenBase.desert);
+		oreList.add(info);
+		
+		info = new OreInfo(40, 0, 10, 2, 2, GGBlocks.GlowOre.blockID, 4, BiomeGenBase.desert);
+		oreList.add(info);
+		//Forest/Jungle
+		info = new OreInfo(40, 0, 10, 2, 2, GGBlocks.GlowOre.blockID, 5, BiomeGenBase.forest);
+		oreList.add(info);
+		
+		info = new OreInfo(40, 0, 10, 2, 2, GGBlocks.GlowOre.blockID, 5, BiomeGenBase.jungle);
+		oreList.add(info);
+		//SnowBiomes
+		info = new OreInfo(40, 0, 10, 2, 2, GGBlocks.GlowOre.blockID, 6, BiomeGenBase.taiga);
+		oreList.add(info);
+		//Plains
+		info = new OreInfo(40, 0, 10, 2, 2, GGBlocks.GlowOre.blockID, 7, BiomeGenBase.plains);
+		oreList.add(info);
+		
+		info = new OreInfo(40, 0, 10, 2, 2, GGBlocks.GlowOre.blockID, 8, BiomeGenBase.plains);
+		oreList.add(info);
+		//extreme hills
+		info = new OreInfo(40, 0, 10, 2, 2, GGBlocks.GlowOre.blockID, 0, BiomeGenBase.extremeHills);
+		oreList.add(info);
+		
+		info = new OreInfo(40, 0, 10, 2, 2, GGBlocks.GlowOre.blockID, 1, BiomeGenBase.extremeHills);
+		oreList.add(info);
 	}
 	
 	
@@ -81,15 +107,17 @@ public class GGBiomeOreGen implements IWorldGenerator{
         		 y = y + info.minHeight;
         		 numOre = MathHelper.clamp_int(random.nextInt(info.maxCluster), info.minCluster, info.maxCluster);
         		 
-        		 if (info.spawnBiome == null ||(info.spawnBiome != null && world.getBiomeGenForCoords(x, z).equals(info.spawnBiome)));
-        		 generateOre(world, random, x, y, z, info.oreType, numOre);
+        		 if (info.spawnBiome == null ||(info.spawnBiome != null && world.getBiomeGenForCoords(x, z).equals(info.spawnBiome)))
+        		 {
+        		   generateOre(world, random, x, y, z, info.oreType, info.metaOre ,numOre);
+        		 }
         		 
         	 }
          }
 		
 	}
 	
-	private void generateOre(World world, Random random, int x, int y, int z, int blockID, int ntg)
+	private void generateOre(World world, Random random, int x, int y, int z, int blockID, int metadata, int ntg)
 	{
 		int lx, ly, lz;
 		lx = x;
@@ -97,6 +125,7 @@ public class GGBiomeOreGen implements IWorldGenerator{
 		lz = z;
 		int id;
 		id = world.getBlockId(x, y, z);
+		int Metadata = metadata;
 		if(id != Block.stone.blockID)
 		{
 			return;
@@ -105,7 +134,7 @@ public class GGBiomeOreGen implements IWorldGenerator{
 		{
 			id = world.getBlockId(lx, ly, lz);
 			
-			world.setBlock(lx, ly, lz, blockID, 4, 2);
+			world.setBlock(lx, ly, lz, blockID, Metadata, 2);
 			switch (random.nextInt(3))
 			{
 			case 0:
