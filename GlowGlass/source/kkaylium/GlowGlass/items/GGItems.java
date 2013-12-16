@@ -1,5 +1,6 @@
 package kkaylium.GlowGlass.items;
 
+import kkaylium.GlowGlass.doors.GGDoorItem;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import net.minecraft.item.Item;
@@ -8,8 +9,10 @@ import net.minecraft.item.ItemStack;
 public class GGItems {
 	
 	public static Item glowCrystal;
+	public static Item glowDoorItem;
 	
 	public static int GlowCrystalDefaultID;
+	public static int GlowDoorItemDefaultID;
 	
 	public static void initItems()
 	{
@@ -26,6 +29,10 @@ public class GGItems {
 		LanguageRegistry.addName(new ItemStack(glowCrystal, 1, 8), "Glow Crystal: Purple");
 		LanguageRegistry.addName(new ItemStack(glowCrystal, 1, 9), "Glow Crystal: Pink");
 		LanguageRegistry.addName(new ItemStack(glowCrystal, 1, 10), "Glow Crystal: Special");
+		
+		glowDoorItem = new GGDoorItem(GlowDoorItemDefaultID).setUnlocalizedName("GlowDoorItem").setTextureName("glowglass:GlowDoorWHITE");
+			GameRegistry.registerItem(glowDoorItem, "GlowDoorItem");
+			LanguageRegistry.addName(glowDoorItem, "Glow Door");
 		
 	}
 

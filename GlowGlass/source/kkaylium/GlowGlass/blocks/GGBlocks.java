@@ -1,5 +1,6 @@
 package kkaylium.GlowGlass.blocks;
 
+import kkaylium.GlowGlass.doors.GGDoor;
 import kkaylium.GlowGlass.fenceGates.*;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemStack;
@@ -35,7 +36,7 @@ public class GGBlocks {
 	public static Block GlowGatePURPLE;
 	public static Block GlowGatePINK;
 	public static Block GlowGateSPECIAL;
-	public static Block GlowGateTemp;
+	public static Block GlowDoor;
 	
 	public static int GlowGlassDefaultID;
 	public static int GlowOreDefaultID;
@@ -91,16 +92,6 @@ public class GGBlocks {
 			LanguageRegistry.addName(new ItemStack(GlowOre, 1, 8), "Glow Ore: Purple");
 			LanguageRegistry.addName(new ItemStack(GlowOre, 1, 9), "Glow Ore: Pink");
 			MinecraftForge.setBlockHarvestLevel(GlowOre, "pickaxe", 2);
-			
-		//GlowIceOre = new GlowIceOre(504);
-			//GameRegistry.registerBlock(GlowIceOre, "GlowIceOre");
-			//LanguageRegistry.addName(GlowIceOre, "Glow Ice Ore");
-		/*
-		GlowFence = new GGFence(601);
-			GameRegistry.registerBlock(GlowFence, GGFenceItemBlock.class, "GlowFence");
-			LanguageRegistry.addName(new ItemStack(GlowFence, 1, 0), "Glow Fence NEW: WHITE");
-			LanguageRegistry.addName(new ItemStack(GlowFence, 1, 1), "Glow Fence NEW: BLACK");
-			*/
 			
 		GlowFenceWHITE = new BlockGlowFence(GlowFenceWHITEDefaultID, "GlowFenceWHITE").setUnlocalizedName("GlowFenceWHITE");
 			GameRegistry.registerBlock(GlowFenceWHITE, "GlowFenceWHITE");
@@ -171,22 +162,9 @@ public class GGBlocks {
 			GameRegistry.registerBlock(GlowGateSPECIAL, "GlowGateRAINBOW");
 			LanguageRegistry.addName(GlowGateSPECIAL, "Glow Glass: Special");
 		
-			/*
-			GlowGateTemp = new GGGateSuperType(600, "GlowFence").setUnlocalizedName("GlowGateSPECIAL");
-			GameRegistry.registerBlock(GlowGateTemp, "GlowGameSPECIAL");
-			LanguageRegistry.addName(new ItemStack(GlowGateTemp, 1, 0), "Glow Ore: White");
-			LanguageRegistry.addName(new ItemStack(GlowGateTemp, 1, 1), "Glow Ore: Black");
-			LanguageRegistry.addName(new ItemStack(GlowGateTemp, 1, 2), "Glow Ore: Red");
-			LanguageRegistry.addName(new ItemStack(GlowGateTemp, 1, 3), "Glow Ore: Orange");
-			LanguageRegistry.addName(new ItemStack(GlowGateTemp, 1, 4), "Glow Ore: Yellow");
-			LanguageRegistry.addName(new ItemStack(GlowGateTemp, 1, 5), "Glow Ore: Green");
-			LanguageRegistry.addName(new ItemStack(GlowGateTemp, 1, 6), "Glow Ore: Blue");
-			LanguageRegistry.addName(new ItemStack(GlowGateTemp, 1, 7), "Glow Ore: Purple");
-			LanguageRegistry.addName(new ItemStack(GlowGateTemp, 1, 8), "Glow Ore: Pink");
-			LanguageRegistry.addName(new ItemStack(GlowGateTemp, 1, 9), "Glow Gate: Pink");
-			LanguageRegistry.addName(new ItemStack(GlowGateTemp, 1, 10), "Glow Gate: Special");
-			*/
-			
+		GlowDoor = new GGDoor(600).setUnlocalizedName("GlowDoor").setTextureName("glowglass:GlowDoorWHITE");
+			GameRegistry.registerBlock(GlowDoor, "GLowDoor");
+			LanguageRegistry.addName(GlowDoor, "GLow Door: White");
 	}
 
 }
