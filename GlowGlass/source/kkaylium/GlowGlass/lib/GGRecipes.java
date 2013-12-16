@@ -39,10 +39,30 @@ public class GGRecipes {
 		GameRegistry.addRecipe(new ItemStack(GGBlocks.GlowGlass, 4, 8), " # ", "#*#", " # ", '#', glass, '*', glowCrystalPINK);
 		GameRegistry.addRecipe(new ItemStack(GGBlocks.GlowGlass, 4, 10), " # ", "#*#", " # ", '#', glass, '*', glowCrystalSPECIAL);
 		//Glowing Fence Recipes
-		
+		GameRegistry.addRecipe(new ItemStack(GGBlocks.GlowFenceWHITE, 6), "   ", "#*#", "#*#", '#', glass, '*', glowCrystalWHITE);
+		GameRegistry.addRecipe(new ItemStack(GGBlocks.GlowFenceBLACK, 6), "   ", "#*#", "#*#", '#', glass, '*', glowCrystalBLACK);
+		GameRegistry.addRecipe(new ItemStack(GGBlocks.GlowFenceRED, 6), "   ", "#*#", "#*#",  '#', glass, '*', glowCrystalRED);
+		GameRegistry.addRecipe(new ItemStack(GGBlocks.GlowFenceORANGE, 6), "   ", "#*#", "#*#",  '#', glass, '*', glowCrystalORANGE);
+		GameRegistry.addRecipe(new ItemStack(GGBlocks.GlowFenceYELLOW, 6), "   ", "#*#", "#*#",  '#', glass, '*', glowCrystalYELLOW);
+		GameRegistry.addRecipe(new ItemStack(GGBlocks.GlowFenceGREEN, 6), "   ", "#*#", "#*#",  '#', glass, '*', glowCrystalGREEN);
+		GameRegistry.addRecipe(new ItemStack(GGBlocks.GlowFenceLIGHTBLUE, 6), "   ", "#*#", "#*#",  '#', glass, '*', glowCrystalLIGHTBLUE);
+		GameRegistry.addRecipe(new ItemStack(GGBlocks.GlowFenceBLUE, 6), "   ", "#*#", "#*#",  '#', glass, '*', glowCrystalBLUE);
+		GameRegistry.addRecipe(new ItemStack(GGBlocks.GlowFencePURPLE, 6), "   ", "#*#", "#*#",  '#', glass, '*', glowCrystalPURPLE);
+		GameRegistry.addRecipe(new ItemStack(GGBlocks.GlowFencePINK, 6), "   ", "#*#", "#*#",  '#', glass, '*', glowCrystalPINK);
+		GameRegistry.addRecipe(new ItemStack(GGBlocks.GlowFenceSPECIAL, 6), "   ", "#*#", "#*#",  '#', glass, '*', glowCrystalSPECIAL);
 		
 		//Glowing Gate Recipes
-		
+		GameRegistry.addRecipe(new ItemStack(GGBlocks.GlowGateWHITE, 6), "   ", "#*#", "# #", '#', glass, '*', glowCrystalWHITE);
+		GameRegistry.addRecipe(new ItemStack(GGBlocks.GlowGateBLACK, 6), "   ", "#*#", "# #", '#', glass, '*', glowCrystalBLACK);
+		GameRegistry.addRecipe(new ItemStack(GGBlocks.GlowGateRED, 6), "   ", "#*#", "# #",  '#', glass, '*', glowCrystalRED);
+		GameRegistry.addRecipe(new ItemStack(GGBlocks.GlowGateORANGE, 6), "   ", "#*#", "# #",  '#', glass, '*', glowCrystalORANGE);
+		GameRegistry.addRecipe(new ItemStack(GGBlocks.GlowGateYELLOW, 6), "   ", "#*#", "# #",  '#', glass, '*', glowCrystalYELLOW);
+		GameRegistry.addRecipe(new ItemStack(GGBlocks.GlowGateGREEN, 6), "   ", "#*#", "# #",  '#', glass, '*', glowCrystalGREEN);
+		GameRegistry.addRecipe(new ItemStack(GGBlocks.GlowGateLIGHTBLUE, 6), "   ", "#*#", "# #",  '#', glass, '*', glowCrystalLIGHTBLUE);
+		GameRegistry.addRecipe(new ItemStack(GGBlocks.GlowGateBLUE, 6), "   ", "#*#", "# #",  '#', glass, '*', glowCrystalBLUE);
+		GameRegistry.addRecipe(new ItemStack(GGBlocks.GlowGatePURPLE, 6), "   ", "#*#", "# #",  '#', glass, '*', glowCrystalPURPLE);
+		GameRegistry.addRecipe(new ItemStack(GGBlocks.GlowGatePINK, 6), "   ", "#*#", "# #",  '#', glass, '*', glowCrystalPINK);
+		GameRegistry.addRecipe(new ItemStack(GGBlocks.GlowGateSPECIAL, 6), "   ", "#*#", "# #",  '#', glass, '*', glowCrystalSPECIAL);
 		//Other Recipes
 	}
 

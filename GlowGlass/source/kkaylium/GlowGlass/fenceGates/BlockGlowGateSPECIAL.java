@@ -142,6 +142,12 @@ public class BlockGlowGateSPECIAL extends BlockFenceGate{
 	 }
 	 
 	 @SideOnly(Side.CLIENT)
+	    public int getRenderBlockPass()
+	    {
+	        return 1;
+	    }
+	 
+	 @SideOnly(Side.CLIENT)
 	 public void registerIcons(IconRegister iconRegister){}
 
 }

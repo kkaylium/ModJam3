@@ -3,21 +3,17 @@ package kkaylium.GlowGlass.blocks;
 import java.util.List;
 import java.util.Random;
 
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
-
 import kkaylium.GlowGlass.GlowGlass;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockFence;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
-import net.minecraft.item.ItemStack;
 import net.minecraft.util.AxisAlignedBB;
-import net.minecraft.util.Icon;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 public class BlockGlowFence extends BlockFence{
 
@@ -90,6 +86,7 @@ public class BlockGlowFence extends BlockFence{
 	//	this.sparkle(world, par2, par3, par4);
 	//}
 	
+	@SuppressWarnings("unused")
 	private void sparkle(World world, int par2, int par3, int par4)
 	{
 		Random random = world.rand;
