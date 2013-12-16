@@ -1,5 +1,6 @@
 package kkaylium.GlowGlass.items;
 
+import kkaylium.GlowGlass.blocks.GGBlocks;
 import kkaylium.GlowGlass.doors.GGDoorItem;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
@@ -9,10 +10,30 @@ import net.minecraft.item.ItemStack;
 public class GGItems {
 	
 	public static Item glowCrystal;
-	public static Item glowDoorItem;
+	public static Item glowDoorItemWHITE;
+	public static Item glowDoorItemBLACK;
+	public static Item glowDoorItemRED;
+	public static Item glowDoorItemORANGE;
+	public static Item glowDoorItemYELLOW;
+	public static Item glowDoorItemGREEN;
+	public static Item glowDoorItemLIGHTBLUE;
+	public static Item glowDoorItemBLUE;
+	public static Item glowDoorItemPURPLE;
+	public static Item glowDoorItemPINK;
+	public static Item glowDoorItemSPECIAL;
 	
 	public static int GlowCrystalDefaultID;
-	public static int GlowDoorItemDefaultID;
+	public static int GlowDoorItemWHITEDefaultID;
+	public static int GlowDoorItemBLACKDefaultID;
+	public static int GlowDoorItemREDDefaultID;
+	public static int GlowDoorItemORANGEDefaultID;
+	public static int GlowDoorItemYELLOWDefaultID;
+	public static int GlowDoorItemGREENDefaultID;
+	public static int GlowDoorItemLIGHTBLUEDefaultID;
+	public static int GlowDoorItemBLUEDefaultID;
+	public static int GlowDoorItemPURPLEDefaultID;
+	public static int GlowDoorItemPINKDefaultID;
+	public static int GlowDoorItemSPECIALDefaultID;
 	
 	public static void initItems()
 	{
@@ -30,9 +51,37 @@ public class GGItems {
 		LanguageRegistry.addName(new ItemStack(glowCrystal, 1, 9), "Glow Crystal: Pink");
 		LanguageRegistry.addName(new ItemStack(glowCrystal, 1, 10), "Glow Crystal: Special");
 		
-		glowDoorItem = new GGDoorItem(GlowDoorItemDefaultID).setUnlocalizedName("GlowDoorItem").setTextureName("glowglass:GlowDoorWHITE");
-			GameRegistry.registerItem(glowDoorItem, "GlowDoorItem");
-			LanguageRegistry.addName(glowDoorItem, "Glow Door");
+		glowDoorItemWHITE = new GGDoorItem(GlowDoorItemWHITEDefaultID, GGBlocks.GlowDoorWHITE).setUnlocalizedName("GlowDoorItem").setTextureName("glowglass:GlowDoorWHITE");
+			GameRegistry.registerItem(glowDoorItemWHITE, "GlowDoorItem");
+			LanguageRegistry.addName(glowDoorItemWHITE, "Glow Door: White");
+		glowDoorItemBLACK = new GGDoorItem(GlowDoorItemBLACKDefaultID, GGBlocks.GlowDoorBLACK).setUnlocalizedName("GlowDoorItem").setTextureName("glowglass:GlowDoorBLACK");
+			GameRegistry.registerItem(glowDoorItemBLACK, "GlowDoorItem");
+			LanguageRegistry.addName(glowDoorItemBLACK, "Glow Door: Black");
+		glowDoorItemRED = new GGDoorItem(GlowDoorItemREDDefaultID, GGBlocks.GlowDoorRED).setUnlocalizedName("GlowDoorItem").setTextureName("glowglass:GlowDoorRED");
+			GameRegistry.registerItem(glowDoorItemRED, "GlowDoorItem");
+			LanguageRegistry.addName(glowDoorItemRED, "Glow Door");
+		glowDoorItemORANGE = new GGDoorItem(GlowDoorItemORANGEDefaultID, GGBlocks.GlowDoorORANGE).setUnlocalizedName("GlowDoorItem").setTextureName("glowglass:GlowDoorORANGE");
+			GameRegistry.registerItem(glowDoorItemORANGE, "GlowDoorItem");
+			LanguageRegistry.addName(glowDoorItemORANGE, "Glow Door: Orange");
+			glowDoorItemYELLOW = new GGDoorItem(GlowDoorItemYELLOWDefaultID, GGBlocks.GlowDoorYELLOW).setUnlocalizedName("GlowDoorItem").setTextureName("glowglass:GlowDoorYELLOW");
+			GameRegistry.registerItem(glowDoorItemYELLOW, "GlowDoorItem");
+			LanguageRegistry.addName(glowDoorItemYELLOW, "Glow Door: YELLOW");
+			glowDoorItemGREEN = new GGDoorItem(GlowDoorItemGREENDefaultID, GGBlocks.GlowDoorGREEN).setUnlocalizedName("GlowDoorItem").setTextureName("glowglass:GlowDoorGREEN");
+			GameRegistry.registerItem(glowDoorItemGREEN, "GlowDoorItem");
+			LanguageRegistry.addName(glowDoorItemGREEN, "Glow Door: Green");
+			glowDoorItemLIGHTBLUE = new GGDoorItem(GlowDoorItemLIGHTBLUEDefaultID, GGBlocks.GlowDoorLIGHTBLUE).setUnlocalizedName("GlowDoorItem").setTextureName("glowglass:GlowDoorLIGHTBLUE");
+			GameRegistry.registerItem(glowDoorItemLIGHTBLUE, "GlowDoorItem");
+			LanguageRegistry.addName(glowDoorItemLIGHTBLUE, "Glow Door: Light Blue");
+			glowDoorItemBLUE = new GGDoorItem(GlowDoorItemBLUEDefaultID, GGBlocks.GlowDoorBLUE).setUnlocalizedName("GlowDoorItem").setTextureName("glowglass:GlowDoorBLUE");
+			GameRegistry.registerItem(glowDoorItemBLUE, "GlowDoorItem");
+			LanguageRegistry.addName(glowDoorItemBLUE, "Glow Door: Blue");
+			glowDoorItemPURPLE = new GGDoorItem(GlowDoorItemPURPLEDefaultID, GGBlocks.GlowDoorPURPLE).setUnlocalizedName("GlowDoorItem").setTextureName("glowglass:GlowDoorPURPLE");
+			GameRegistry.registerItem(glowDoorItemPURPLE, "GlowDoorItem");
+			LanguageRegistry.addName(glowDoorItemPURPLE, "Glow Door: Purple");
+			glowDoorItemPINK = new GGDoorItem(GlowDoorItemPINKDefaultID, GGBlocks.GlowDoorPINK).setUnlocalizedName("GlowDoorItem").setTextureName("glowglass:GlowDoorPINK").getColorFromItemStack(new ItemStack(glowDoorItemPINK), );
+			GameRegistry.registerItem(glowDoorItemPINK, "GlowDoorItem");
+			LanguageRegistry.addName(glowDoorItemPINK, "Glow Door: Pink");
+			
 		
 	}
 

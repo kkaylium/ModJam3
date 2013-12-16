@@ -36,7 +36,17 @@ public class GGBlocks {
 	public static Block GlowGatePURPLE;
 	public static Block GlowGatePINK;
 	public static Block GlowGateSPECIAL;
-	public static Block GlowDoor;
+	public static Block GlowDoorWHITE;
+	public static Block GlowDoorBLACK;
+	public static Block GlowDoorRED;
+	public static Block GlowDoorORANGE;
+	public static Block GlowDoorYELLOW;
+	public static Block GlowDoorGREEN;
+	public static Block GlowDoorLIGHTBLUE;
+	public static Block GlowDoorBLUE;
+	public static Block GlowDoorPURPLE;
+	public static Block GlowDoorPINK;
+	public static Block GlowDoorSPECIAL;
 	
 	public static int GlowGlassDefaultID;
 	public static int GlowOreDefaultID;
@@ -62,6 +72,17 @@ public class GGBlocks {
 	public static int GlowGatePURPLEDefaultID;
 	public static int GlowGatePINKDefaultID;
 	public static int GlowGateSPECIALDefaultID;
+	public static int GlowDoorWHITEDefaultID;
+	public static int GlowDoorBLACKDefaultID;
+	public static int GlowDoorREDDefaultID;
+	public static int GlowDoorORANGEDefaultID;
+	public static int GlowDoorYELLOWDefaultID;
+	public static int GlowDoorGREENDefaultID;
+	public static int GlowDoorLIGHTBLUEDefaultID;
+	public static int GlowDoorBLUEDefaultID;
+	public static int GlowDoorPURPLEDefaultID;
+	public static int GlowDoorPINKDefaultID;
+	public static int GlowDoorSPECIALDefaultID;
 	
 	public static void initBlocks()
 	{
@@ -136,35 +157,62 @@ public class GGBlocks {
 			LanguageRegistry.addName(GlowGateBLACK, "Glow Gate: Black");
 		GlowGateRED = new BlockGlowGateRED(GlowGateREDDefaultID).setUnlocalizedName("GlowGateRED");
 			GameRegistry.registerBlock(GlowGateRED, "GlowGateRED");
-			LanguageRegistry.addName(GlowGateRED, "Glow Glass: Red");
+			LanguageRegistry.addName(GlowGateRED, "Glow Gate: Red");
 		GlowGateORANGE = new BlockGlowGateORANGE(GlowGateORANGEDefaultID).setUnlocalizedName("GlowGateORANGE");
 			GameRegistry.registerBlock(GlowGateORANGE, "GlowGateORANGE");
-			LanguageRegistry.addName(GlowGateORANGE, "Glow Glass: Orange");
+			LanguageRegistry.addName(GlowGateORANGE, "Glow Gate: Orange");
 		GlowGateYELLOW = new BlockGlowGateYELLOW(GlowGateYELLOWDefaultID).setUnlocalizedName("GlowGateYELLOW");
 			GameRegistry.registerBlock(GlowGateYELLOW, "GlowGateYELLOW");
-			LanguageRegistry.addName(GlowGateYELLOW, "Glow Glass: Yellow");
+			LanguageRegistry.addName(GlowGateYELLOW, "Glow Gate: Yellow");
 		GlowGateGREEN = new BlockGlowGateGREEN(GlowGateGREENDefaultID).setUnlocalizedName("GlowGateGREEN");
 			GameRegistry.registerBlock(GlowGateGREEN, "GlowGateGREEN");
-			LanguageRegistry.addName(GlowGateGREEN, "Glow Glass: Green");
+			LanguageRegistry.addName(GlowGateGREEN, "Glow Gate: Green");
 		GlowGateLIGHTBLUE = new BlockGlowGateLIGHTBLUE(GlowGateLIGHTBLUEDefaultID).setUnlocalizedName("GlowGateLIGHTBLUE");
 			GameRegistry.registerBlock(GlowGateLIGHTBLUE, "GlowGateLIGHTBLUE");
-			LanguageRegistry.addName(GlowGateLIGHTBLUE, "Glow Glass: Light Blue");
+			LanguageRegistry.addName(GlowGateLIGHTBLUE, "Glow Gate: Light Blue");
 		GlowGateBLUE = new BlockGlowGateBLUE(GlowGateBLUEDefaultID).setUnlocalizedName("GlowGateBLUE");
 			GameRegistry.registerBlock(GlowGateBLUE, "GlowGateBLUE");
-			LanguageRegistry.addName(GlowGateBLUE, "Glow Glass: Blue");
+			LanguageRegistry.addName(GlowGateBLUE, "Glow Gate: Blue");
 		GlowGatePURPLE = new BlockGlowGatePURPLE(GlowGatePURPLEDefaultID).setUnlocalizedName("GlowGatePURPLE");
 			GameRegistry.registerBlock(GlowGatePURPLE, "GlowGatePURPLE");
-			LanguageRegistry.addName(GlowGatePURPLE, "Glow Glass: Purple");
+			LanguageRegistry.addName(GlowGatePURPLE, "Glow Gate: Purple");
 		GlowGatePINK = new BlockGlowGatePINK(GlowGatePINKDefaultID).setUnlocalizedName("GlowGatePINK");
 			GameRegistry.registerBlock(GlowGatePINK, "GlowGatePINK");
-			LanguageRegistry.addName(GlowGatePINK, "Glow Glass: Pink");
+			LanguageRegistry.addName(GlowGatePINK, "Glow Gate: Pink");
 		GlowGateSPECIAL = new BlockGlowGateSPECIAL(GlowGateSPECIALDefaultID).setUnlocalizedName("GlowGateRAINBOW");
 			GameRegistry.registerBlock(GlowGateSPECIAL, "GlowGateRAINBOW");
-			LanguageRegistry.addName(GlowGateSPECIAL, "Glow Glass: Special");
+			LanguageRegistry.addName(GlowGateSPECIAL, "Glow Gate: Special");
 		
-		GlowDoor = new GGDoor(600).setUnlocalizedName("GlowDoor").setTextureName("glowglass:GlowDoorWHITE");
-			GameRegistry.registerBlock(GlowDoor, "GLowDoor");
-			LanguageRegistry.addName(GlowDoor, "GLow Door: White");
+		GlowDoorWHITE = new GGDoor(GlowDoorWHITEDefaultID).setUnlocalizedName("GlowDoor").setTextureName("glowglass:GlowDoorWHITE");
+			GameRegistry.registerBlock(GlowDoorWHITE, "GlowDoor");
+			LanguageRegistry.addName(GlowDoorWHITE, "Glow Door: White");
+		GlowDoorBLACK = new GGDoor(GlowDoorBLACKDefaultID).setUnlocalizedName("GlowDoor").setTextureName("glowglass:GlowDoorBLACK");
+			GameRegistry.registerBlock(GlowDoorBLACK, "GlowDoor");
+			LanguageRegistry.addName(GlowDoorBLACK, "Glow Door: Black");
+		GlowDoorRED = new GGDoor(GlowDoorREDDefaultID).setUnlocalizedName("GlowDoor").setTextureName("glowglass:GlowDoorRED");
+			GameRegistry.registerBlock(GlowDoorRED, "GlowDoor");
+			LanguageRegistry.addName(GlowDoorRED, "Glow Door: Red");
+		GlowDoorORANGE = new GGDoor(GlowDoorORANGEDefaultID).setUnlocalizedName("GlowDoor").setTextureName("glowglass:GlowDoorORANGE");
+			GameRegistry.registerBlock(GlowDoorORANGE, "GlowDoor");
+			LanguageRegistry.addName(GlowDoorORANGE, "Glow Door: Orange");
+		GlowDoorYELLOW = new GGDoor(GlowDoorYELLOWDefaultID).setUnlocalizedName("GlowDoor").setTextureName("glowglass:GlowDoorYELLOW");
+			GameRegistry.registerBlock(GlowDoorYELLOW, "GlowDoor");
+			LanguageRegistry.addName(GlowDoorYELLOW, "Glow Door: Yellow");
+		GlowDoorGREEN = new GGDoor(GlowDoorGREENDefaultID).setUnlocalizedName("GlowDoor").setTextureName("glowglass:GlowDoorGREEN");
+			GameRegistry.registerBlock(GlowDoorGREEN, "GlowDoor");
+			LanguageRegistry.addName(GlowDoorGREEN, "Glow Door: Green");
+		GlowDoorLIGHTBLUE = new GGDoor(GlowDoorLIGHTBLUEDefaultID).setUnlocalizedName("GlowDoor").setTextureName("glowglass:GlowDoorLIGHTBLUE");
+			GameRegistry.registerBlock(GlowDoorLIGHTBLUE, "GlowDoor");
+			LanguageRegistry.addName(GlowDoorLIGHTBLUE, "Glow Door: Light Blue");
+		GlowDoorBLUE = new GGDoor(GlowDoorBLUEDefaultID).setUnlocalizedName("GlowDoor").setTextureName("glowglass:GlowDoorBLUE");
+			GameRegistry.registerBlock(GlowDoorBLUE, "GlowDoor");
+			LanguageRegistry.addName(GlowDoorBLUE, "Glow Door: Blue");
+		GlowDoorPURPLE = new GGDoor(GlowDoorPURPLEDefaultID).setUnlocalizedName("GlowDoor").setTextureName("glowglass:GlowDoorPURPLE");
+			GameRegistry.registerBlock(GlowDoorPURPLE, "GlowDoor");
+			LanguageRegistry.addName(GlowDoorPURPLE, "GLow Door: Purple");
+		GlowDoorPINK = new GGDoor(GlowDoorPINKDefaultID).setUnlocalizedName("GlowDoor").setTextureName("glowglass:GlowDoorPINK");
+			GameRegistry.registerBlock(GlowDoorPINK, "GlowDoor");
+			LanguageRegistry.addName(GlowDoorPINK, "Glow Door: Pink");
 	}
 
 }

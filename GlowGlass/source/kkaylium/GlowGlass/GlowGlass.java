@@ -65,6 +65,7 @@ public class GlowGlass
 		GGBlocks.GlowGateSPECIALDefaultID = config.getBlock("Glow Gate Special", 523).getInt();
 		
 		GGItems.GlowCrystalDefaultID = config.getItem("Glow Crystal", 1000).getInt();
+		//GGItems.GlowDoorItemDefaultID = config.getItem("Glow Door WHITE", 1001).getInt();
 		
 		config.save();
 		
