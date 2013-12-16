@@ -160,7 +160,7 @@ public class BlockGlowOre extends Block{
 					world.spawnParticle("reddust", d1, d2, d3, 0.0D, 0.0D, 0.0D);
 					break;
 				case 2:
-					world.spawnParticle("reddust", d1, d2, d3, 1.0D, 0.0D, 0.0D);
+					world.spawnParticle("reddust", d1, d2, d3, 25.0D, 0.0D, 0.0D);
 					break;
 				case 3:
 					world.spawnParticle("reddust", d1, d2, d3, 0.9D, 0.2D, 0.0D);
