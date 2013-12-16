@@ -4,6 +4,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import kkaylium.GlowGlass.blocks.GGBlocks;
 import kkaylium.GlowGlass.items.GGItems;
 import net.minecraft.block.Block;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
 public class GGRecipes {
@@ -63,7 +64,8 @@ public class GGRecipes {
 		GameRegistry.addRecipe(new ItemStack(GGBlocks.GlowGatePURPLE, 6), "   ", "#*#", "# #",  '#', glass, '*', glowCrystalPURPLE);
 		GameRegistry.addRecipe(new ItemStack(GGBlocks.GlowGatePINK, 6), "   ", "#*#", "# #",  '#', glass, '*', glowCrystalPINK);
 		GameRegistry.addRecipe(new ItemStack(GGBlocks.GlowGateSPECIAL, 6), "   ", "#*#", "# #",  '#', glass, '*', glowCrystalSPECIAL);
-		//Other Recipes
+		//Other Recipe
+		GameRegistry.addShapelessRecipe(new ItemStack(GGItems.glowCrystal, 10, 1), glowCrystalRED, glowCrystalORANGE, glowCrystalYELLOW, glowCrystalGREEN,  glowCrystalLIGHTBLUE, glowCrystalBLUE, glowCrystalPURPLE, glowCrystalPINK, (new ItemStack(Item.diamond)));
 	}
 
 }
