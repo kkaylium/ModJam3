@@ -68,11 +68,14 @@ public class GGBiomeOreGen implements IWorldGenerator{
 		info = new OreInfo(40, 0, 10, 2, 1, GGBlocks.GlowOre.blockID, 6, BiomeGenBase.taiga);
 		oreList.add(info);
 		
-		//Plains
-		info = new OreInfo(40, 0, 10, 2, 1, GGBlocks.GlowOre.blockID, 7, BiomeGenBase.plains);
+		info = new OreInfo(40, 0, 10, 2, 1, GGBlocks.GlowOre.blockID, 7, BiomeGenBase.taiga);
 		oreList.add(info);
 		
+		//Plains
 		info = new OreInfo(40, 0, 10, 2, 1, GGBlocks.GlowOre.blockID, 8, BiomeGenBase.plains);
+		oreList.add(info);
+		
+		info = new OreInfo(40, 0, 10, 2, 1, GGBlocks.GlowOre.blockID, 9, BiomeGenBase.plains);
 		oreList.add(info);
 		
 		//extreme hills

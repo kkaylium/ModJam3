@@ -86,9 +86,10 @@ public class GGBlocks {
 			LanguageRegistry.addName(new ItemStack(GlowOre, 1, 3), "Glow Ore: Orange");
 			LanguageRegistry.addName(new ItemStack(GlowOre, 1, 4), "Glow Ore: Yellow");
 			LanguageRegistry.addName(new ItemStack(GlowOre, 1, 5), "Glow Ore: Green");
-			LanguageRegistry.addName(new ItemStack(GlowOre, 1, 6), "Glow Ore: Blue");
-			LanguageRegistry.addName(new ItemStack(GlowOre, 1, 7), "Glow Ore: Purple");
-			LanguageRegistry.addName(new ItemStack(GlowOre, 1, 8), "Glow Ore: Pink");
+			LanguageRegistry.addName(new ItemStack(GlowOre, 1, 6), "Glow Ore: Light Blue");
+			LanguageRegistry.addName(new ItemStack(GlowOre, 1, 7), "Glow Ore: Blue");
+			LanguageRegistry.addName(new ItemStack(GlowOre, 1, 8), "Glow Ore: Purple");
+			LanguageRegistry.addName(new ItemStack(GlowOre, 1, 9), "Glow Ore: Pink");
 			MinecraftForge.setBlockHarvestLevel(GlowOre, "pickaxe", 2);
 			
 		//GlowIceOre = new GlowIceOre(504);

@@ -4,7 +4,6 @@ import java.util.Random;
 
 import kkaylium.GlowGlass.blocks.GGBlocks;
 
-import net.minecraft.block.Block;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenMinable;

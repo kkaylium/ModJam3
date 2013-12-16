@@ -15,35 +15,63 @@ public class ModelRainbowSlime extends ModelBase
   //fields
     ModelRenderer OuterCube;
     ModelRenderer InnerCube;
+    ModelRenderer Bodies;
+    ModelRenderer slimeRightEye;
+
+    ModelRenderer slimeLeftEye;
+
+    ModelRenderer slimeMouth;
   
-  public ModelRainbowSlime()
+  public ModelRainbowSlime(int par1)
   {
-    textureWidth = 256;
-    textureHeight = 128;
+    textureWidth = 64;
+    textureHeight = 32;
     
-      OuterCube = new ModelRenderer(this, 0, 0);
-      OuterCube.addBox(-11F, -11F, -11F, 22, 21, 21);
-      OuterCube.setRotationPoint(0F, 13F, 1F);
-      OuterCube.setTextureSize(256, 128);
-      OuterCube.mirror = true;
-      setRotation(OuterCube, 0F, 0F, 0F);
-      InnerCube = new ModelRenderer(this, 0, 40);
-      InnerCube.addBox(-8F, -8F, -8F, 17, 17, 17);
-      InnerCube.setRotationPoint(0F, 12F, 0F);
-      InnerCube.setTextureSize(256, 128);
-      InnerCube.mirror = true;
-      setRotation(InnerCube, 0F, 0F, 0F);
+    this.Bodies = new ModelRenderer(this, 0, par1);
+    this.Bodies.addBox(-4.0F, 16.0F, -4.0F, 8, 8, 8);
+    
+    if(par1 > 0)
+    {
+    	this.Bodies = new ModelRenderer(this, 0, par1);
+    	this.Bodies.addBox(-3.0F, 17.0F, -3.0F, 6, 6, 6);
+    	this.slimeRightEye = new ModelRenderer(this, 32, 0);
+        this.slimeRightEye.addBox(-3.25F, 18.0F, -3.5F, 2, 2, 2);
+        this.slimeLeftEye = new ModelRenderer(this, 32, 4);
+        this.slimeLeftEye.addBox(1.25F, 18.0F, -3.5F, 2, 2, 2);
+        this.slimeMouth = new ModelRenderer(this, 32, 8);
+        this.slimeMouth.addBox(0.0F, 21.0F, -3.5F, 1, 1, 1);
+    }
+     // OuterCube = new ModelRenderer(this, 0, par1);
+     // OuterCube.addBox(-11F, -11F, -11F, 22, 21, 21);
+     // OuterCube.setRotationPoint(0F, 13F, 1F);
+     // OuterCube.setTextureSize(256, 128);
+     // OuterCube.mirror = true;
+     // setRotation(OuterCube, 0F, 0F, 0F);
+     // InnerCube = new ModelRenderer(this, 0, 40);
+     // InnerCube.addBox(-8F, -8F, -8F, 17, 17, 17);
+     // InnerCube.setRotationPoint(0F, 12F, 0F);
+     // InnerCube.setTextureSize(256, 128);
+     // InnerCube.mirror = true;
+     // setRotation(InnerCube, 0F, 0F, 0F);
   }
   
   public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
   {
-    super.render(entity, f, f1, f2, f3, f4, f5);
+    //super.render(entity, f, f1, f2, f3, f4, f5);
     setRotationAngles(f, f1, f2, f3, f4, f5, entity);
-    OuterCube.render(f5);
-    InnerCube.render(f5);
+    this.Bodies.render(f5);
+    if (this.slimeRightEye != null)
+    {
+        this.slimeRightEye.render(f5);
+        this.slimeLeftEye.render(f5);
+        this.slimeMouth.render(f5);
+    }
+    //OuterCube.render(f5);
+    //InnerCube.render(f5);
   }
   
-  private void setRotation(ModelRenderer model, float x, float y, float z)
+  @SuppressWarnings("unused")
+private void setRotation(ModelRenderer model, float x, float y, float z)
   {
     model.rotateAngleX = x;
     model.rotateAngleY = y;

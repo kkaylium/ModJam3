@@ -51,7 +51,8 @@ public class GGIceOreGen implements IWorldGenerator {
 		 int x,y,z;
          int numOre;
          int numCluster;
-         int tcount = 0;
+         @SuppressWarnings("unused")
+		 int tcount = 0;
          if (world.provider.dimensionId != 0) //Only generate in the main world.
          {  
         	 return;

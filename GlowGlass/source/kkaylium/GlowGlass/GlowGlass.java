@@ -4,8 +4,11 @@ import kkaylium.GlowGlass.blocks.GGBlocks;
 import kkaylium.GlowGlass.gen.GGBiomeOreGen;
 import kkaylium.GlowGlass.items.GGItems;
 import kkaylium.GlowGlass.lib.GGRecipes;
+import kkaylium.GlowGlass.models.EntityRainbowSlime;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.EnumCreatureType;
 import net.minecraft.item.ItemStack;
+import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraftforge.common.Configuration;
 import net.minecraftforge.oredict.OreDictionary;
 import cpw.mods.fml.common.Mod;
@@ -16,6 +19,7 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
+import cpw.mods.fml.common.registry.EntityRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
@@ -81,6 +85,11 @@ public class GlowGlass
 	public void load(FMLInitializationEvent event)
 	{
 		OreDictionary.registerOre(GGBlocks.GlowOre.getUnlocalizedName(), new ItemStack(GGItems.glowCrystal));
+		
+		proxy.registerRenderInformation();
+		EntityRegistry.registerModEntity(EntityRainbowSlime.class, "RainbowSlime", 2, this, 80, 3, true);
+        EntityRegistry.addSpawn(EntityRainbowSlime.class, 5, 2, 6, EnumCreatureType.creature, BiomeGenBase.plains);
+        LanguageRegistry.instance().addStringLocalization("entity.instance.RainbowSlime.name", "Rainbow Slime");
 	}
 	
 	@EventHandler

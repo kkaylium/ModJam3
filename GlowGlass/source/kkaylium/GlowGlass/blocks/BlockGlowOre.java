@@ -17,7 +17,7 @@ import net.minecraft.world.World;
 
 public class BlockGlowOre extends Block{
 
-	public static final String[] oreNames = new String[]{"WHITE", "BLACK", "RED", "ORANGE", "YELLOW", "GREEN", "BLUE", "PURPLE", "PINK"};
+	public static final String[] oreNames = new String[]{"WHITE", "BLACK", "RED", "ORANGE", "YELLOW", "GREEN", "LIGHTBLUE", "BLUE", "PURPLE", "PINK"};
 	@SideOnly(Side.CLIENT)
 	private Icon[] icons;
 	
@@ -90,6 +90,7 @@ public class BlockGlowOre extends Block{
 		par3List.add(new ItemStack(par1, 1, 6));
 		par3List.add(new ItemStack(par1, 1, 7));
 		par3List.add(new ItemStack(par1, 1, 8));
+		par3List.add(new ItemStack(par1, 1, 9));
 	}
 	 
 	@SideOnly(Side.CLIENT)
