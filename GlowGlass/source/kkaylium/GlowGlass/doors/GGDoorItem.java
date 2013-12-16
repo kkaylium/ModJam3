@@ -61,9 +61,11 @@ public class GGDoorItem extends Item{
      }
 	 
 	 @Override
-	    @SideOnly(Side.CLIENT)
-	    public boolean requiresMultipleRenderPasses() {
-	        return true;
-	    }
+	 @SideOnly(Side.CLIENT)
+	 public boolean requiresMultipleRenderPasses() 
+	 {
+	     return true;
+	 }
+	 
 	
 }

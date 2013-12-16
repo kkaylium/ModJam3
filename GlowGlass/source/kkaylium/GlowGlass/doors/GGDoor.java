@@ -111,6 +111,23 @@ public class GGDoor extends BlockDoor{
 	 
 	    }
 	
+	@SideOnly(Side.CLIENT)
+    @Override
+    public boolean shouldSideBeRendered(IBlockAccess iBlockAccess, int x, int y, int z, int s) 
+	{
+        if(s==0)
+        {
+            return iBlockAccess.getBlockId(x, y-1, z) != blockID;
+        }
+        else if(s==1)
+        {
+            return iBlockAccess.getBlockId(x, y+1, z) != blockID;
+        }
+        else
+        {
+        	return true;
+        }
+    }
 	
 }
 

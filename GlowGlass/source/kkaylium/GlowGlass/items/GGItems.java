@@ -52,34 +52,34 @@ public class GGItems {
 		LanguageRegistry.addName(new ItemStack(glowCrystal, 1, 10), "Glow Crystal: Special");
 		
 		glowDoorItemWHITE = new GGDoorItem(GlowDoorItemWHITEDefaultID, GGBlocks.GlowDoorWHITE).setUnlocalizedName("GlowDoorItem").setTextureName("glowglass:GlowDoorWHITE");
-			GameRegistry.registerItem(glowDoorItemWHITE, "GlowDoorItem");
+			GameRegistry.registerItem(glowDoorItemWHITE, "GlowDoorItemWHITE");
 			LanguageRegistry.addName(glowDoorItemWHITE, "Glow Door: White");
 		glowDoorItemBLACK = new GGDoorItem(GlowDoorItemBLACKDefaultID, GGBlocks.GlowDoorBLACK).setUnlocalizedName("GlowDoorItem").setTextureName("glowglass:GlowDoorBLACK");
-			GameRegistry.registerItem(glowDoorItemBLACK, "GlowDoorItem");
+			GameRegistry.registerItem(glowDoorItemBLACK, "GlowDoorItemBLACK");
 			LanguageRegistry.addName(glowDoorItemBLACK, "Glow Door: Black");
 		glowDoorItemRED = new GGDoorItem(GlowDoorItemREDDefaultID, GGBlocks.GlowDoorRED).setUnlocalizedName("GlowDoorItem").setTextureName("glowglass:GlowDoorRED");
-			GameRegistry.registerItem(glowDoorItemRED, "GlowDoorItem");
+			GameRegistry.registerItem(glowDoorItemRED, "GlowDoorItemRED");
 			LanguageRegistry.addName(glowDoorItemRED, "Glow Door");
 		glowDoorItemORANGE = new GGDoorItem(GlowDoorItemORANGEDefaultID, GGBlocks.GlowDoorORANGE).setUnlocalizedName("GlowDoorItem").setTextureName("glowglass:GlowDoorORANGE");
-			GameRegistry.registerItem(glowDoorItemORANGE, "GlowDoorItem");
+			GameRegistry.registerItem(glowDoorItemORANGE, "GlowDoorItemORANGE");
 			LanguageRegistry.addName(glowDoorItemORANGE, "Glow Door: Orange");
 			glowDoorItemYELLOW = new GGDoorItem(GlowDoorItemYELLOWDefaultID, GGBlocks.GlowDoorYELLOW).setUnlocalizedName("GlowDoorItem").setTextureName("glowglass:GlowDoorYELLOW");
-			GameRegistry.registerItem(glowDoorItemYELLOW, "GlowDoorItem");
+			GameRegistry.registerItem(glowDoorItemYELLOW, "GlowDoorItemYELLOW");
 			LanguageRegistry.addName(glowDoorItemYELLOW, "Glow Door: YELLOW");
 			glowDoorItemGREEN = new GGDoorItem(GlowDoorItemGREENDefaultID, GGBlocks.GlowDoorGREEN).setUnlocalizedName("GlowDoorItem").setTextureName("glowglass:GlowDoorGREEN");
-			GameRegistry.registerItem(glowDoorItemGREEN, "GlowDoorItem");
+			GameRegistry.registerItem(glowDoorItemGREEN, "GlowDoorItemGREEN");
 			LanguageRegistry.addName(glowDoorItemGREEN, "Glow Door: Green");
 			glowDoorItemLIGHTBLUE = new GGDoorItem(GlowDoorItemLIGHTBLUEDefaultID, GGBlocks.GlowDoorLIGHTBLUE).setUnlocalizedName("GlowDoorItem").setTextureName("glowglass:GlowDoorLIGHTBLUE");
-			GameRegistry.registerItem(glowDoorItemLIGHTBLUE, "GlowDoorItem");
+			GameRegistry.registerItem(glowDoorItemLIGHTBLUE, "GlowDoorItemLIGHTBLUE");
 			LanguageRegistry.addName(glowDoorItemLIGHTBLUE, "Glow Door: Light Blue");
 			glowDoorItemBLUE = new GGDoorItem(GlowDoorItemBLUEDefaultID, GGBlocks.GlowDoorBLUE).setUnlocalizedName("GlowDoorItem").setTextureName("glowglass:GlowDoorBLUE");
-			GameRegistry.registerItem(glowDoorItemBLUE, "GlowDoorItem");
+			GameRegistry.registerItem(glowDoorItemBLUE, "GlowDoorItemBLUE");
 			LanguageRegistry.addName(glowDoorItemBLUE, "Glow Door: Blue");
 			glowDoorItemPURPLE = new GGDoorItem(GlowDoorItemPURPLEDefaultID, GGBlocks.GlowDoorPURPLE).setUnlocalizedName("GlowDoorItem").setTextureName("glowglass:GlowDoorPURPLE");
-			GameRegistry.registerItem(glowDoorItemPURPLE, "GlowDoorItem");
+			GameRegistry.registerItem(glowDoorItemPURPLE, "GlowDoorItemPURPLE");
 			LanguageRegistry.addName(glowDoorItemPURPLE, "Glow Door: Purple");
-			glowDoorItemPINK = new GGDoorItem(GlowDoorItemPINKDefaultID, GGBlocks.GlowDoorPINK).setUnlocalizedName("GlowDoorItem").setTextureName("glowglass:GlowDoorPINK").getColorFromItemStack(new ItemStack(glowDoorItemPINK), );
-			GameRegistry.registerItem(glowDoorItemPINK, "GlowDoorItem");
+			glowDoorItemPINK = new GGDoorItem(GlowDoorItemPINKDefaultID, GGBlocks.GlowDoorPINK).setUnlocalizedName("GlowDoorItem").setTextureName("glowglass:GlowDoorWHITE");
+			GameRegistry.registerItem(glowDoorItemPINK, "GlowDoorItemPINK");
 			LanguageRegistry.addName(glowDoorItemPINK, "Glow Door: Pink");
 			
 		
