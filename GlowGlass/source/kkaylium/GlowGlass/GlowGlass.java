@@ -3,6 +3,7 @@ package kkaylium.GlowGlass;
 import kkaylium.GlowGlass.blocks.GGBlocks;
 import kkaylium.GlowGlass.gen.GGBiomeOreGen;
 import kkaylium.GlowGlass.items.GGItems;
+import kkaylium.GlowGlass.lib.GGRecipes;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.Configuration;
@@ -16,6 +17,7 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.registry.GameRegistry;
+import cpw.mods.fml.common.registry.LanguageRegistry;
 
 
 @Mod (modid = "glowglass", name = "GlowGlass", version = "0.0.001")
@@ -68,8 +70,11 @@ public class GlowGlass
 		
 		GGBlocks.initBlocks();
 		GGItems.initItems();
-	
+		GGRecipes.initRecipes();
+		
 		GameRegistry.registerWorldGenerator(new GGBiomeOreGen());
+		
+		LanguageRegistry.instance().addStringLocalization("itemGroup.Glow Glass", "Glow Glass");
 	}
 	
 	@EventHandler

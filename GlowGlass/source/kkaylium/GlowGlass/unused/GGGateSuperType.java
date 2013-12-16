@@ -1,4 +1,4 @@
-package kkaylium.GlowGlass.blocks;
+package kkaylium.GlowGlass.unused;
 
 import java.util.List;
 

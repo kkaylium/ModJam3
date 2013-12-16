@@ -8,17 +8,38 @@ import net.minecraft.item.ItemStack;
 
 public class GGRecipes {
 	
-	public ItemStack glass = new ItemStack(Block.glass);
-	public ItemStack glowGlassWHITE = new ItemStack(GGBlocks.GlowGlass, 1, 0);
-	public ItemStack glowCrystalWHITE = new ItemStack(GGItems.glowCrystal, 1, 0);
-	public ItemStack glowCrystalBLACK = new ItemStack(GGItems.glowCrystal, 1, 1);
-	public ItemStack glowCrystalRED = new ItemStack(GGItems.glowCrystal, 1, 2);
+	public static ItemStack glass = new ItemStack(Block.glass);
+	public static ItemStack glowGlassWHITE = new ItemStack(GGBlocks.GlowGlass, 1, 0);
+	public static ItemStack glowGlassBLACK = new ItemStack(GGBlocks.GlowGlass, 1, 1);
+	public static ItemStack glowGlassRED = new ItemStack(GGBlocks.GlowGlass, 1, 2);
+	public static ItemStack glowCrystalWHITE = new ItemStack(GGItems.glowCrystal, 1, 0);
+	public static ItemStack glowCrystalBLACK = new ItemStack(GGItems.glowCrystal, 1, 1);
+	public static ItemStack glowCrystalRED = new ItemStack(GGItems.glowCrystal, 1, 2);
+	public static ItemStack glowCrystalORANGE = new ItemStack(GGItems.glowCrystal, 1, 3);
+	public static ItemStack glowCrystalYELLOW = new ItemStack(GGItems.glowCrystal, 1, 4);
+	public static ItemStack glowCrystalGREEN = new ItemStack(GGItems.glowCrystal, 1, 5);
+	public static ItemStack glowCrystalLIGHTBLUE = new ItemStack(GGItems.glowCrystal, 1, 9);
+	public static ItemStack glowCrystalBLUE = new ItemStack(GGItems.glowCrystal, 1, 6);
+	public static ItemStack glowCrystalPURPLE = new ItemStack(GGItems.glowCrystal, 1, 7);
+	public static ItemStack glowCrystalPINK = new ItemStack(GGItems.glowCrystal, 1, 8);
+	public static ItemStack glowCrystalSPECIAL = new ItemStack(GGItems.glowCrystal, 1, 10);
 	
-	public void initRecipes()
+	public static void initRecipes()
 	{
 		//Glowing Glass Recipes
-		GameRegistry.addRecipe(glowGlassWHITE, 4, " # ", "#*#", " # ", '#', glass '*', glowCrystalWHITE);
+		GameRegistry.addRecipe(new ItemStack(GGBlocks.GlowGlass, 4, 0), " # ", "#*#", " # ", '#', glass, '*', glowCrystalWHITE);
+		GameRegistry.addRecipe(new ItemStack(GGBlocks.GlowGlass, 4, 1), " # ", "#*#", " # ", '#', glass, '*', glowCrystalBLACK);
+		GameRegistry.addRecipe(new ItemStack(GGBlocks.GlowGlass, 4, 2), " # ", "#*#", " # ", '#', glass, '*', glowCrystalRED);
+		GameRegistry.addRecipe(new ItemStack(GGBlocks.GlowGlass, 4, 3), " # ", "#*#", " # ", '#', glass, '*', glowCrystalORANGE);
+		GameRegistry.addRecipe(new ItemStack(GGBlocks.GlowGlass, 4, 4), " # ", "#*#", " # ", '#', glass, '*', glowCrystalYELLOW);
+		GameRegistry.addRecipe(new ItemStack(GGBlocks.GlowGlass, 4, 5), " # ", "#*#", " # ", '#', glass, '*', glowCrystalGREEN);
+		GameRegistry.addRecipe(new ItemStack(GGBlocks.GlowGlass, 4, 9), " # ", "#*#", " # ", '#', glass, '*', glowCrystalLIGHTBLUE);
+		GameRegistry.addRecipe(new ItemStack(GGBlocks.GlowGlass, 4, 6), " # ", "#*#", " # ", '#', glass, '*', glowCrystalBLUE);
+		GameRegistry.addRecipe(new ItemStack(GGBlocks.GlowGlass, 4, 7), " # ", "#*#", " # ", '#', glass, '*', glowCrystalPURPLE);
+		GameRegistry.addRecipe(new ItemStack(GGBlocks.GlowGlass, 4, 8), " # ", "#*#", " # ", '#', glass, '*', glowCrystalPINK);
+		GameRegistry.addRecipe(new ItemStack(GGBlocks.GlowGlass, 4, 10), " # ", "#*#", " # ", '#', glass, '*', glowCrystalSPECIAL);
 		//Glowing Fence Recipes
+		
 		
 		//Glowing Gate Recipes
 		

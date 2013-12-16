@@ -1,4 +1,4 @@
-package kkaylium.GlowGlass.blocks;
+package kkaylium.GlowGlass.unused;
 
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;

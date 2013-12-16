@@ -1,6 +1,7 @@
-package kkaylium.GlowGlass.blocks;
+package kkaylium.GlowGlass.fenceGates;
 
 import kkaylium.GlowGlass.GlowGlass;
+import kkaylium.GlowGlass.blocks.GGBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockFenceGate;
 import net.minecraft.client.renderer.texture.IconRegister;
@@ -15,16 +16,10 @@ import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class GGFenceGateTemp extends BlockFenceGate{
-
-	public static final String[] gateNames = new String[]{"WHITE", "BLACK", "RED", "ORANGE", "YELLOW", "GREEN", "LIGHTBLUE", "BLUE", "PURPLE", "PINK", "RAINBOW"};
-	@SideOnly(Side.CLIENT)
-	private Icon[] icons;
-	private final String field_94464_a;
+public class BlockGlowGateBLUE extends BlockFenceGate{
 	
-	public GGFenceGateTemp(int par1, String par2) {
+	public BlockGlowGateBLUE(int par1) {
 		super(par1);
-		this.field_94464_a = par2;
 		this.setCreativeTab(GlowGlass.GGTab);
 		this.setLightValue(1.0F);
 		
@@ -33,7 +28,7 @@ public class GGFenceGateTemp extends BlockFenceGate{
 	@SideOnly(Side.CLIENT)
 	public Icon getIcon(int par1, int par2)
 	{
-		return GGBlocks.GlowFenceWHITE.getBlockTextureFromSide(par1);
+		return GGBlocks.GlowFenceBLUE.getBlockTextureFromSide(par1);
 	}
 	
 	public boolean canPlaceBlockAt(World world, int x, int y, int z)
@@ -148,4 +143,5 @@ public class GGFenceGateTemp extends BlockFenceGate{
 	 
 	 @SideOnly(Side.CLIENT)
 	 public void registerIcons(IconRegister iconRegister){}
+
 }

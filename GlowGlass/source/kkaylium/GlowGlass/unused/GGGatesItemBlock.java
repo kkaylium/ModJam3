@@ -1,5 +1,6 @@
-package kkaylium.GlowGlass.blocks;
+package kkaylium.GlowGlass.unused;
 
+import kkaylium.GlowGlass.blocks.GGBlocks;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.item.ItemBlock;

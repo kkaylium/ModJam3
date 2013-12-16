@@ -10,6 +10,8 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.chunk.IChunkProvider;
+import net.minecraftforge.common.BiomeDictionary;
+import net.minecraftforge.common.BiomeDictionary.Type;
 import cpw.mods.fml.common.IWorldGenerator;
 
 public class GGBiomeOreGen implements IWorldGenerator{
@@ -88,7 +90,8 @@ public class GGBiomeOreGen implements IWorldGenerator{
 		 int x,y,z;
          int numOre;
          int numCluster;
-         int tcount = 0;
+         @SuppressWarnings("unused")
+		int tcount = 0;
          if (world.provider.dimensionId != 0) //Only generate in the main world.
          {  
         	 return;
@@ -112,6 +115,11 @@ public class GGBiomeOreGen implements IWorldGenerator{
         		 y = y + info.minHeight;
         		 numOre = MathHelper.clamp_int(random.nextInt(info.maxCluster), info.minCluster, info.maxCluster);
         		 
+        		 BiomeGenBase biome = world.getWorldChunkManager().getBiomeGenAt(chunkX, chunkZ);
+        		 if (BiomeDictionary.isBiomeOfType(biome, Type.DESERT))
+        		 {
+        			
+        		 }
         		 if (info.spawnBiome == null ||(info.spawnBiome != null && world.getBiomeGenForCoords(x, z).equals(info.spawnBiome)))
         		 {
         		   generateOre(world, random, x, y, z, info.oreType, info.metaOre ,numOre);
