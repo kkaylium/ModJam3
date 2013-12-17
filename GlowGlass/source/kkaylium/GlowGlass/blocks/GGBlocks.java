@@ -12,6 +12,7 @@ public class GGBlocks {
 	
 	public static Block GlowGlass;
 	public static Block GlowOre;
+	public static Block GlowBlock;
 	public static Block GlowIceOre;
 	public static Block GlowFence;
 	public static Block GlowFenceWHITE;
@@ -37,7 +38,7 @@ public class GGBlocks {
 	public static Block GlowGatePINK;
 	public static Block GlowGateSPECIAL;
 	public static Block GlowDoorWHITE;
-	public static Block GlowDoorBLACK;
+	/*public static Block GlowDoorBLACK;
 	public static Block GlowDoorRED;
 	public static Block GlowDoorORANGE;
 	public static Block GlowDoorYELLOW;
@@ -46,10 +47,11 @@ public class GGBlocks {
 	public static Block GlowDoorBLUE;
 	public static Block GlowDoorPURPLE;
 	public static Block GlowDoorPINK;
-	public static Block GlowDoorSPECIAL;
+	public static Block GlowDoorSPECIAL;*/
 	
 	public static int GlowGlassDefaultID;
 	public static int GlowOreDefaultID;
+	public static int GlowBlockDefaultID;
 	public static int GlowFenceWHITEDefaultID;
 	public static int GlowFenceBLACKDefaultID;
 	public static int GlowFenceREDDefaultID;
@@ -114,6 +116,24 @@ public class GGBlocks {
 			LanguageRegistry.addName(new ItemStack(GlowOre, 1, 8), "Glow Ore: Purple");
 			LanguageRegistry.addName(new ItemStack(GlowOre, 1, 9), "Glow Ore: Pink");
 			MinecraftForge.setBlockHarvestLevel(GlowOre, "pickaxe", 2);
+			
+		GlowBlock = new GGGemBlock(GlowBlockDefaultID).setUnlocalizedName("GlowBlock");
+			GameRegistry.registerBlock(GlowBlock, GGGemItemBlock.class, "GlowBlock");
+			LanguageRegistry.addName(new ItemStack(GlowBlock,  1, 0), "Glow Block: White");
+			LanguageRegistry.addName(new ItemStack(GlowBlock,  1, 1), "Glow Block: Black");
+			LanguageRegistry.addName(new ItemStack(GlowBlock,  1, 2), "Glow Block: Red");
+			LanguageRegistry.addName(new ItemStack(GlowBlock,  1, 3), "Glow Block: Orange");
+			LanguageRegistry.addName(new ItemStack(GlowBlock,  1, 4), "Glow Block: Yellow");
+			LanguageRegistry.addName(new ItemStack(GlowBlock,  1, 5), "Glow Block: Green");
+			LanguageRegistry.addName(new ItemStack(GlowBlock,  1, 6), "Glow Block: LightBlue");
+			LanguageRegistry.addName(new ItemStack(GlowBlock,  1, 7), "Glow Block: Blue");
+			LanguageRegistry.addName(new ItemStack(GlowBlock,  1, 8), "Glow Block: Purple");
+			LanguageRegistry.addName(new ItemStack(GlowBlock,  1, 9), "Glow Block: Pink");
+			LanguageRegistry.addName(new ItemStack(GlowBlock,  1, 10), "Glow Block: Special");
+			MinecraftForge.setBlockHarvestLevel(GlowOre, "pickaxe", 2);
+			
+			
+			
 			
 		GlowFenceWHITE = new BlockGlowFence(GlowFenceWHITEDefaultID, "GlowFenceWHITE").setUnlocalizedName("GlowFenceWHITE");
 			GameRegistry.registerBlock(GlowFenceWHITE, "GlowFenceWHITE");

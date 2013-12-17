@@ -20,7 +20,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
 
-@Mod (modid = "glowglass", name = "GlowGlass", version = "0.0.001")
+@Mod (modid = "glowglass", name = "GlowGlass", version = "1.1.0")
 @NetworkMod (clientSideRequired = true, serverSideRequired = false)
 public class GlowGlass 
 {
@@ -41,6 +41,7 @@ public class GlowGlass
 		//Stuff Goes Here
 		GGBlocks.GlowGlassDefaultID = config.getBlock("Glow Glass", 500).getInt();
 		GGBlocks.GlowOreDefaultID = config.getBlock("Glow Ore", 501).getInt();
+		GGBlocks.GlowBlockDefaultID = config.getBlock("Glow Block", 524).getInt();
 		GGBlocks.GlowFenceWHITEDefaultID = config.getBlock("Glow Fence White", 502).getInt();
 		GGBlocks.GlowFenceBLACKDefaultID = config.getBlock("Glow Fence Black", 503).getInt();
 		GGBlocks.GlowFenceREDDefaultID = config.getBlock("Glow Fence Red", 504).getInt();
