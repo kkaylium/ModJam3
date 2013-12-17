@@ -65,8 +65,30 @@ public class GlowGlass
 		GGBlocks.GlowGateSPECIALDefaultID = config.getBlock("Glow Gate Special", 523).getInt();
 		
 		GGItems.GlowCrystalDefaultID = config.getItem("Glow Crystal", 1000).getInt();
-		//GGItems.GlowDoorItemDefaultID = config.getItem("Glow Door WHITE", 1001).getInt();
 		
+		//GGItems.GlowDoorItemWHITEDefaultID = config.getItem("Glow Door WHITE", 1001).getInt();
+		//GGItems.GlowDoorItemBLACKDefaultID = config.getItem("Glow Door BLACK", 1002).getInt();
+		//GGItems.GlowDoorItemREDDefaultID = config.getItem("Glow Door RED", 1003).getInt();
+		//GGItems.GlowDoorItemORANGEDefaultID = config.getItem("Glow Door ORANGE", 1004).getInt();
+		//GGItems.GlowDoorItemYELLOWDefaultID = config.getItem("Glow Door YELLOW", 1005).getInt();
+		//GGItems.GlowDoorItemGREENDefaultID = config.getItem("Glow Door GREEN", 1006).getInt();
+		//GGItems.GlowDoorItemLIGHTBLUEDefaultID = config.getItem("Glow Door LIGHTBLUE", 1007).getInt();
+		//GGItems.GlowDoorItemBLUEDefaultID = config.getItem("Glow Door BLUE", 1008).getInt();
+		//GGItems.GlowDoorItemPURPLEDefaultID = config.getItem("Glow Door PURPLE", 1009).getInt();
+		//GGItems.GlowDoorItemPINKDefaultID = config.getItem("Glow Door PINK", 1010).getInt();
+		
+		
+		//GGBlocks.GlowDoorWHITEDefaultID = config.getItem("Glow Door WHITE", 600).getInt();
+		/*GGBlocks.GlowDoorBLACKDefaultID = config.getItem("Glow Door BLACK", 525).getInt();
+		GGBlocks.GlowDoorREDDefaultID = config.getItem("Glow Door RED", 526).getInt();
+		GGBlocks.GlowDoorORANGEDefaultID = config.getItem("Glow Door ORANGE", 527).getInt();
+		GGBlocks.GlowDoorYELLOWDefaultID = config.getItem("Glow Door YELLOW", 528).getInt();
+		GGBlocks.GlowDoorGREENDefaultID = config.getItem("Glow Door GREEN", 529).getInt();
+		GGBlocks.GlowDoorLIGHTBLUEDefaultID = config.getItem("Glow Door LIGHTBLUE", 530).getInt();
+		GGBlocks.GlowDoorBLUEDefaultID = config.getItem("Glow Door BLUE", 531).getInt();
+		GGBlocks.GlowDoorPURPLEDefaultID = config.getItem("Glow Door PURPLE", 532).getInt();
+		GGBlocks.GlowDoorPINKDefaultID = config.getItem("Glow Door PINK", 533).getInt();
+		*/
 		config.save();
 		
 		GGBlocks.initBlocks();

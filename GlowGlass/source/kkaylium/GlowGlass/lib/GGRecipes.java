@@ -64,8 +64,9 @@ public class GGRecipes {
 		GameRegistry.addRecipe(new ItemStack(GGBlocks.GlowGatePURPLE, 6), "   ", "#*#", "# #",  '#', glass, '*', glowCrystalPURPLE);
 		GameRegistry.addRecipe(new ItemStack(GGBlocks.GlowGatePINK, 6), "   ", "#*#", "# #",  '#', glass, '*', glowCrystalPINK);
 		GameRegistry.addRecipe(new ItemStack(GGBlocks.GlowGateSPECIAL, 6), "   ", "#*#", "# #",  '#', glass, '*', glowCrystalSPECIAL);
-		//Other Recipe
+		//Other Recipes
 		GameRegistry.addShapelessRecipe(new ItemStack(GGItems.glowCrystal, 1, 10), glowCrystalRED, glowCrystalORANGE, glowCrystalYELLOW, glowCrystalGREEN,  glowCrystalLIGHTBLUE, glowCrystalBLUE, glowCrystalPURPLE, glowCrystalPINK, (new ItemStack(Item.diamond)));
+		GameRegistry.addRecipe(new ItemStack(GGItems.glowDoorItemWHITE, 1), "##",  "**", "##", '#', glass, '*', glowCrystalWHITE);
 	}
 
 }

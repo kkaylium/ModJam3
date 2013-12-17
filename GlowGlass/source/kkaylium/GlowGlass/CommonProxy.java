@@ -10,8 +10,4 @@ public class CommonProxy {
 		EntityRegistry.registerGlobalEntityID(EntityRainbowSlime.class, "RainbowSlime", EntityRegistry.findGlobalUniqueEntityId(), 10, 0);
 	}
 
-	public void initTextures() 
-	{
-		
-	}
 }

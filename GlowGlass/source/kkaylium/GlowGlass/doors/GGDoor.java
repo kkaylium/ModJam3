@@ -78,7 +78,20 @@ public class GGDoor extends BlockDoor{
 	    return this.placerItem.itemID;
 	}
 	
-	public int getRenderPass()
+	@Override 
+	public boolean isOpaqueCube()
+	{
+		return false;
+	}
+	
+	@Override
+	public boolean renderAsNormalBlock()
+	{
+		return false;
+	}
+	
+	@Override
+	public int getRenderBlockPass()
 	{
 		return 1;
 	}
@@ -111,23 +124,20 @@ public class GGDoor extends BlockDoor{
 	 
 	    }
 	
-	@SideOnly(Side.CLIENT)
-    @Override
-    public boolean shouldSideBeRendered(IBlockAccess iBlockAccess, int x, int y, int z, int s) 
-	{
-        if(s==0)
-        {
-            return iBlockAccess.getBlockId(x, y-1, z) != blockID;
-        }
-        else if(s==1)
-        {
-            return iBlockAccess.getBlockId(x, y+1, z) != blockID;
-        }
-        else
-        {
-        	return true;
-        }
-    }
-	
+	  @SideOnly(Side.CLIENT)
+	  @Override
+	  public boolean shouldSideBeRendered(IBlockAccess iBlockAccess, int x, int y, int z, int s) 
+	  {
+	        if(s==0 && iBlockAccess.getBlockId(x, y-1, z) == blockID)
+	        {
+	            return false;
+	        }
+	        else if(s==1 && iBlockAccess.getBlockId(x, y+1, z) == blockID)
+	        {
+	            return false;
+	        }
+	  
+	        return super.shouldSideBeRendered(iBlockAccess, x,y,z,s);
+	    }
 }
 
