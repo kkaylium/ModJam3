@@ -13,6 +13,8 @@ import net.minecraft.entity.passive.EntityAnimal;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
+import net.minecraft.world.biome.BiomeGenBase;
+import net.minecraft.world.chunk.Chunk;
 
 public class EntityRainbowSlime extends EntityAnimal{
 
@@ -28,15 +30,15 @@ public class EntityRainbowSlime extends EntityAnimal{
         this.yOffset = 0.0F;
         this.slimeJumpDelay = this.rand.nextInt(20) + 10;
         this.setSlimeSize(i);
-		this.getNavigator().setAvoidsWater(true);
-		this.setSize(1.0F, 1.0F);
-		this.isImmuneToFire = false;
-		float var2 = 0.25F;
+//		this.getNavigator().setAvoidsWater(true);
+//		this.setSize(1.0F, 1.0F);
+//		this.isImmuneToFire = false;
+//		float var2 = 0.25F;
 		
 		this.tasks.addTask(0, new EntityAISwimming(this));
 		this.tasks.addTask(1, new EntityAIPanic(this, 0.38F));
 		this.tasks.addTask(2, new EntityAITempt(this, 0.3F, GGItems.glowCrystal.itemID, false));
-		this.tasks.addTask(3, new EntityAIWander(this, var2));
+		this.tasks.addTask(3, new EntityAIWander(this, 0.25F));
 		this.tasks.addTask(4, new EntityAIWatchClosest(this, EntityPlayer.class, 6.0F));
 		this.tasks.addTask(5, new EntityAILookIdle(this));
 		
@@ -81,7 +83,7 @@ public class EntityRainbowSlime extends EntityAnimal{
 	
 	public void onUpdate()
     {
-        if (!this.worldObj.isRemote && this.worldObj.difficultySetting == 0 && this.getSlimeSize() > 0)
+        if (!this.worldObj.isRemote && this.getSlimeSize() > 0)
         {
             this.isDead = true;
         }
@@ -123,6 +125,35 @@ public class EntityRainbowSlime extends EntityAnimal{
         {
             i = this.getSlimeSize();
             this.setSize(0.6F * (float)i, 0.6F * (float)i);
+        }
+    }
+	
+	public boolean getCanSpawnHere()
+    {
+        Chunk chunk = this.worldObj.getChunkFromBlockCoords(MathHelper.floor_double(this.posX), MathHelper.floor_double(this.posZ));
+
+        if (this.worldObj.getWorldInfo().getTerrainType().handleSlimeSpawnReduction(rand, worldObj))
+        {
+            return false;
+        }
+        else
+        {
+            if (this.getSlimeSize() == 1)
+            {
+                BiomeGenBase biomegenbase = this.worldObj.getBiomeGenForCoords(MathHelper.floor_double(this.posX), MathHelper.floor_double(this.posZ));
+
+                if (biomegenbase == BiomeGenBase.plains && this.posY > 50.0D && this.posY < 70.0D && this.rand.nextFloat() < 0.5F && this.rand.nextFloat() < this.worldObj.getCurrentMoonPhaseFactor() && this.worldObj.getBlockLightValue(MathHelper.floor_double(this.posX), MathHelper.floor_double(this.posY), MathHelper.floor_double(this.posZ)) <= this.rand.nextInt(8))
+                {
+                    return super.getCanSpawnHere();
+                }
+
+                if (this.rand.nextInt(10) == 0 && chunk.getRandomWithSeed(987234911L).nextInt(10) == 0 && this.posY < 40.0D)
+                {
+                    return super.getCanSpawnHere();
+                }
+            }
+
+            return false;
         }
     }
 	

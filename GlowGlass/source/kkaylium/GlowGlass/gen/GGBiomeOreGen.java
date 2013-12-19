@@ -48,67 +48,68 @@ public class GGBiomeOreGen implements IWorldGenerator{
 		OreInfo info;
 		
 		//Desert
-		info = new OreInfo(40, 0, 10, 2, 1, GGBlocks.GlowOre.blockID, 2, BiomeGenBase.desert);
+		info = new OreInfo(40, 1, 10, 2, 1, GGBlocks.GlowOre.blockID, 2, BiomeGenBase.desert);
 		oreList.add(info);
 		
-		info = new OreInfo(40, 0, 10, 2, 1, GGBlocks.GlowOre.blockID, 3, BiomeGenBase.desert);
+		info = new OreInfo(40, 1, 10, 2, 1, GGBlocks.GlowOre.blockID, 3, BiomeGenBase.desert);
 		oreList.add(info);
 		
-		info = new OreInfo(40, 0, 10, 2, 1, GGBlocks.GlowOre.blockID, 4, BiomeGenBase.desert);
+		info = new OreInfo(40, 1, 10, 2, 1, GGBlocks.GlowOre.blockID, 4, BiomeGenBase.desert);
 		oreList.add(info);
 		
 		//Forest/Jungle
-		info = new OreInfo(40, 0, 10, 2, 1, GGBlocks.GlowOre.blockID, 5, BiomeGenBase.forest);
+		info = new OreInfo(40, 1, 10, 2, 1, GGBlocks.GlowOre.blockID, 5, BiomeGenBase.forest);
 		oreList.add(info);
 		
-		info = new OreInfo(40, 0, 10, 2, 1, GGBlocks.GlowOre.blockID, 5, BiomeGenBase.forestHills);
+		info = new OreInfo(40, 1, 10, 2, 1, GGBlocks.GlowOre.blockID, 5, BiomeGenBase.forestHills);
+		oreList.add(info);
 		
-		info = new OreInfo(40, 0, 10, 2, 1, GGBlocks.GlowOre.blockID, 5, BiomeGenBase.jungle);
+		info = new OreInfo(40, 1, 10, 2, 1, GGBlocks.GlowOre.blockID, 5, BiomeGenBase.jungle);
 		oreList.add(info);
 		
 		//SnowBiomes
-		info = new OreInfo(40, 0, 10, 2, 1, GGBlocks.GlowOre.blockID, 6, BiomeGenBase.taiga);
+		info = new OreInfo(40, 1, 10, 2, 1, GGBlocks.GlowOre.blockID, 6, BiomeGenBase.taiga);
 		oreList.add(info);
 		
-		info = new OreInfo(40, 0, 10, 2, 1, GGBlocks.GlowOre.blockID, 7, BiomeGenBase.taiga);
+		info = new OreInfo(40, 1, 10, 2, 1, GGBlocks.GlowOre.blockID, 7, BiomeGenBase.taiga);
 		oreList.add(info);
 		
-		info = new OreInfo(40, 0, 10, 2, 1, GGBlocks.GlowOre.blockID, 6, BiomeGenBase.frozenRiver);
+		info = new OreInfo(40, 1, 10, 2, 1, GGBlocks.GlowOre.blockID, 6, BiomeGenBase.frozenRiver);
 		oreList.add(info);
 		
-		info = new OreInfo(40, 0, 10, 2, 1, GGBlocks.GlowOre.blockID, 7, BiomeGenBase.frozenRiver);
+		info = new OreInfo(40, 1, 10, 2, 1, GGBlocks.GlowOre.blockID, 7, BiomeGenBase.frozenRiver);
 		oreList.add(info);
 		
-		info = new OreInfo(40, 0, 10, 2, 1, GGBlocks.GlowOre.blockID, 6, BiomeGenBase.iceMountains);
+		info = new OreInfo(40, 1, 10, 2, 1, GGBlocks.GlowOre.blockID, 6, BiomeGenBase.iceMountains);
 		oreList.add(info);
 		
-		info = new OreInfo(40, 0, 10, 2, 1, GGBlocks.GlowOre.blockID, 7, BiomeGenBase.iceMountains);
+		info = new OreInfo(40, 1, 10, 2, 1, GGBlocks.GlowOre.blockID, 7, BiomeGenBase.iceMountains);
 		oreList.add(info);
 		
-		info = new OreInfo(40, 0, 10, 2, 1, GGBlocks.GlowOre.blockID, 6, BiomeGenBase.icePlains);
+		info = new OreInfo(40, 1, 10, 2, 1, GGBlocks.GlowOre.blockID, 6, BiomeGenBase.icePlains);
 		oreList.add(info);
 		
-		info = new OreInfo(40, 0, 10, 2, 1, GGBlocks.GlowOre.blockID, 7, BiomeGenBase.icePlains);
+		info = new OreInfo(40, 1, 10, 2, 1, GGBlocks.GlowOre.blockID, 7, BiomeGenBase.icePlains);
 		oreList.add(info);
 		
 		//Plains
-		info = new OreInfo(40, 0, 10, 2, 1, GGBlocks.GlowOre.blockID, 8, BiomeGenBase.plains);
+		info = new OreInfo(40, 1, 10, 2, 1, GGBlocks.GlowOre.blockID, 8, BiomeGenBase.plains);
 		oreList.add(info);
 		
-		info = new OreInfo(40, 0, 10, 2, 1, GGBlocks.GlowOre.blockID, 9, BiomeGenBase.plains);
+		info = new OreInfo(40, 1, 10, 2, 1, GGBlocks.GlowOre.blockID, 9, BiomeGenBase.plains);
 		oreList.add(info);
 		
 		//extreme hills
-		info = new OreInfo(60, 0, 10, 2, 2, GGBlocks.GlowOre.blockID, 0, BiomeGenBase.extremeHills);
+		info = new OreInfo(60, 1, 10, 2, 2, GGBlocks.GlowOre.blockID, 0, BiomeGenBase.extremeHills);
 		oreList.add(info);
 		
-		info = new OreInfo(60, 0, 10, 2, 2, GGBlocks.GlowOre.blockID, 1, BiomeGenBase.extremeHills);
+		info = new OreInfo(60, 1, 10, 2, 2, GGBlocks.GlowOre.blockID, 1, BiomeGenBase.extremeHills);
 		oreList.add(info);
 		
-		info = new OreInfo(60, 0, 10, 2, 2, GGBlocks.GlowOre.blockID, 0, BiomeGenBase.extremeHillsEdge);
+		info = new OreInfo(60, 1, 10, 2, 2, GGBlocks.GlowOre.blockID, 0, BiomeGenBase.extremeHillsEdge);
 		oreList.add(info);
 		
-		info = new OreInfo(60, 0, 10, 2, 2, GGBlocks.GlowOre.blockID, 1, BiomeGenBase.extremeHillsEdge);
+		info = new OreInfo(60, 1, 10, 2, 2, GGBlocks.GlowOre.blockID, 1, BiomeGenBase.extremeHillsEdge);
 		oreList.add(info);
 	}
 	

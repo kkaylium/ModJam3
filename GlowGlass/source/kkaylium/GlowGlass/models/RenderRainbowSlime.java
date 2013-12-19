@@ -13,7 +13,8 @@ public class RenderRainbowSlime extends RenderLiving{
 	private static final ResourceLocation rainbowSlimeTexture = new ResourceLocation("glowglass:assets/textures/entity/rainbowslime/RainbowSlime.png");
 	private ModelBase scaleAmount;
 	
-	public RenderRainbowSlime(ModelBase par1ModelBase, ModelBase par2ModelBase, float par3) {
+	public RenderRainbowSlime(ModelBase par1ModelBase, ModelBase par2ModelBase, float par3) 
+	{
 		super(par1ModelBase, par3);
 		this.scaleAmount = par2ModelBase;
 	}

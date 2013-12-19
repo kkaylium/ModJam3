@@ -2,6 +2,8 @@ package kkaylium.GlowGlass.doors;
 
 import java.util.Random;
 
+import kkaylium.GlowGlass.items.GGItems;
+
 import net.minecraft.block.BlockDoor;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.IconFlipped;
@@ -98,7 +100,7 @@ public class GGDoor extends BlockDoor{
 
 	public int idDropped(int par1, Random par2Random, int par3)
 	    {
-	    return (par1 & 8) != 0 ? 0 : (this.placerItem.itemID);
+			return GGItems.glowDoorItemWHITE.itemID;
 	    }
 
 	public boolean onBlockActivated(World par1World, int par2, int par3, int par4, EntityPlayer par5EntityPlayer, int par6, float par7, float par8, float par9)

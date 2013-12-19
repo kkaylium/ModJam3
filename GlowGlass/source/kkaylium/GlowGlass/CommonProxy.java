@@ -1,6 +1,6 @@
 package kkaylium.GlowGlass;
 
-import kkaylium.GlowGlass.models.EntityRainbowSlime;
+import kkaylium.GlowGlass.rainbowSlimes.EntityRainbowSlime;
 import cpw.mods.fml.common.registry.EntityRegistry;
 
 public class CommonProxy {

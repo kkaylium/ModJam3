@@ -6,16 +6,20 @@
 
 package kkaylium.GlowGlass.models;
 
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.entity.Entity;
 
+@SideOnly(Side.CLIENT)
 public class ModelRainbowSlime extends ModelBase
 {
   //fields
-    ModelRenderer OuterCube;
-    ModelRenderer InnerCube;
+    //ModelRenderer OuterCube;
+    //ModelRenderer InnerCube;
     ModelRenderer Bodies;
+    
     ModelRenderer slimeRightEye;
 
     ModelRenderer slimeLeftEye;
@@ -24,8 +28,8 @@ public class ModelRainbowSlime extends ModelBase
   
   public ModelRainbowSlime(int par1)
   {
-    textureWidth = 64;
-    textureHeight = 32;
+   // textureWidth = 64;
+   // textureHeight = 32;
     
     this.Bodies = new ModelRenderer(this, 0, par1);
     this.Bodies.addBox(-4.0F, 16.0F, -4.0F, 8, 8, 8);
@@ -55,21 +59,22 @@ public class ModelRainbowSlime extends ModelBase
      // setRotation(InnerCube, 0F, 0F, 0F);
   }
   
-  public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
+  public void render(Entity entity, float f2, float f3, float f4, float f5, float f6, float f7)
   {
     //super.render(entity, f, f1, f2, f3, f4, f5);
-    setRotationAngles(f, f1, f2, f3, f4, f5, entity);
-    this.Bodies.render(f5);
+    this.setRotationAngles(f2, f3, f4, f5, f6, f7, entity);
+    this.Bodies.render(f7);
+    
     if (this.slimeRightEye != null)
     {
-        this.slimeRightEye.render(f5);
-        this.slimeLeftEye.render(f5);
-        this.slimeMouth.render(f5);
+        this.slimeRightEye.render(f7);
+        this.slimeLeftEye.render(f7);
+        this.slimeMouth.render(f7);
     }
     //OuterCube.render(f5);
     //InnerCube.render(f5);
   }
-  
+ 
   @SuppressWarnings("unused")
 private void setRotation(ModelRenderer model, float x, float y, float z)
   {

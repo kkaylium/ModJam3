@@ -25,7 +25,7 @@ public class BlockGlowOre extends Block{
 		super(par1, Material.rock);
 		this.setTextureName("GlowOre");
 		this.setCreativeTab(GlowGlass.GGTab);
-		this.setLightValue(0.1F);
+		this.setLightValue(0.3F);
 		this.setHardness(1.6F);
 		this.setResistance(10.0F);
 		this.setStepSound(soundStoneFootstep);
