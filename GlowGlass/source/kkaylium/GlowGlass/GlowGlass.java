@@ -30,7 +30,7 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 @NetworkMod (clientSideRequired = true, serverSideRequired = false)
 public class GlowGlass 
 {
-	@Instance
+	@Instance("glowglass")
 	public static GlowGlass instance;
 	
 	@SidedProxy(clientSide = "kkaylium.GlowGlass.ClientProxy", serverSide = "kkaylium.GlowGlass.CommonProxy")
@@ -117,7 +117,7 @@ public class GlowGlass
 		
 		proxy.registerRenderInformation();
 		EntityRegistry.registerModEntity(EntityRainbowSlime.class, "RainbowSlime", 2, this, 40, 3, true);
-        EntityRegistry.addSpawn(EntityRainbowSlime.class, 20, 2, 6, EnumCreatureType.creature,
+        EntityRegistry.addSpawn(EntityRainbowSlime.class, 20, 2, 6, EnumCreatureType.monster,
         		BiomeGenBase.extremeHills, BiomeGenBase.extremeHillsEdge, BiomeGenBase.plains);
         LanguageRegistry.instance().addStringLocalization("entity.RainbowSlime.name", "Rainbow Slime");
 	}
