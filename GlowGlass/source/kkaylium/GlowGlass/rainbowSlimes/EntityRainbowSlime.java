@@ -232,7 +232,7 @@ public class EntityRainbowSlime extends EntitySlime
 
         if (!this.worldObj.isRemote && i > 1 && this.getHealth() <= 0.0F)
         {
-            int j = 2 + this.rand.nextInt(3);
+            int j = 2 + this.rand.nextInt(1);
 
             for (int k = 0; k < j; ++k)
             {
@@ -271,7 +271,7 @@ public class EntityRainbowSlime extends EntitySlime
     @Override
     protected boolean canDamagePlayer()
     {
-        return this.getSlimeSize() > 1;
+        return false;
     }
 
     /**
