@@ -8,6 +8,7 @@ public class GlowGlassItemBlock extends ItemBlock{
 
 	public GlowGlassItemBlock(int par1) {
 		super(par1);
+		this.setHasSubtypes(true);
 		
 	}
 	@Override

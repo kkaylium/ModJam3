@@ -116,8 +116,9 @@ public class GlowGlass
 		OreDictionary.registerOre(GGBlocks.GlowOre.getUnlocalizedName(), new ItemStack(GGItems.glowCrystal));
 		
 		proxy.registerRenderInformation();
-		EntityRegistry.registerModEntity(EntityRainbowSlime.class, "RainbowSlime", 2, this, 80, 3, true);
-        EntityRegistry.addSpawn(EntityRainbowSlime.class, 5, 2, 6, EnumCreatureType.creature, BiomeGenBase.plains);
+		EntityRegistry.registerModEntity(EntityRainbowSlime.class, "RainbowSlime", 2, this, 40, 3, true);
+        EntityRegistry.addSpawn(EntityRainbowSlime.class, 20, 2, 6, EnumCreatureType.creature,
+        		BiomeGenBase.extremeHills, BiomeGenBase.extremeHillsEdge, BiomeGenBase.plains);
         LanguageRegistry.instance().addStringLocalization("entity.RainbowSlime.name", "Rainbow Slime");
 	}
 	

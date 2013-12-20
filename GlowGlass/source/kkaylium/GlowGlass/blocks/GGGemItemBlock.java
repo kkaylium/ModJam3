@@ -9,6 +9,7 @@ public class GGGemItemBlock extends ItemBlock{
 
 	public GGGemItemBlock(int par1) {
 		super(par1);
+		this.setHasSubtypes(true);
 		
 	}
 	@Override

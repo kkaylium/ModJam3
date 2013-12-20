@@ -4,7 +4,6 @@ import kkaylium.GlowGlass.items.GGItems;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.monster.EntitySlime;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.Item;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.MathHelper;
@@ -28,15 +27,31 @@ public class EntityRainbowSlime extends EntitySlime
         this.yOffset = 0.0F;
         this.slimeJumpDelay = this.rand.nextInt(20) + 10;
         this.setSlimeSize(i);
-       // this.tasks.addTask(3, new EntityAITempt(this, 1.25D, GGItems.glowCrystal.itemID, false));
+       // this.tasks.addTask(0, new GGEntityAITempt(this, 0.25D, GGItems.glowCrystal.itemID, false));
     }
-
+    
+//    @Override
+//    public boolean isAIEnabled()
+//    {
+//        return true;
+//    }
+    
+//    @Override
+//    protected void applyEntityAttributes()
+//    {
+//        super.applyEntityAttributes();
+//        this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setAttribute(10.0D);
+//        this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(0.20000000298023224D);
+//    }
+    
+    @Override
     protected void entityInit()
     {
         super.entityInit();
         //this.dataWatcher.addObject(16, new Byte((byte)1));
     }
 
+    @Override
     protected void setSlimeSize(int par1)
     {
         this.dataWatcher.updateObject(16, new Byte((byte)par1));
@@ -50,6 +65,7 @@ public class EntityRainbowSlime extends EntitySlime
     /**
      * Returns the size of the slime.
      */
+    @Override
     public int getSlimeSize()
     {
         return this.dataWatcher.getWatchableObjectByte(16);
@@ -58,6 +74,7 @@ public class EntityRainbowSlime extends EntitySlime
     /**
      * (abstract) Protected helper method to write subclass entity data to NBT.
      */
+    @Override
     public void writeEntityToNBT(NBTTagCompound par1NBTTagCompound)
     {
         super.writeEntityToNBT(par1NBTTagCompound);
@@ -67,6 +84,7 @@ public class EntityRainbowSlime extends EntitySlime
     /**
      * (abstract) Protected helper method to read subclass entity data from NBT.
      */
+    @Override
     public void readEntityFromNBT(NBTTagCompound par1NBTTagCompound)
     {
         super.readEntityFromNBT(par1NBTTagCompound);
@@ -76,6 +94,7 @@ public class EntityRainbowSlime extends EntitySlime
     /**
      * Returns the name of a particle effect that may be randomly created by EntitySlime.onUpdate()
      */
+    @Override
     protected String getSlimeParticle()
     {
         return "slime";
@@ -84,6 +103,7 @@ public class EntityRainbowSlime extends EntitySlime
     /**
      * Returns the name of the sound played when the slime jumps.
      */
+    @Override
     protected String getJumpSound()
     {
         return "mob.slime." + (this.getSlimeSize() > 1 ? "big" : "small");
@@ -92,6 +112,7 @@ public class EntityRainbowSlime extends EntitySlime
     /**
      * Called to update the entity's position/logic.
      */
+    @Override
     public void onUpdate()
     {
         if (!this.worldObj.isRemote && this.worldObj.difficultySetting == 0 && this.getSlimeSize() > 0)
@@ -139,6 +160,7 @@ public class EntityRainbowSlime extends EntitySlime
         }
     }
 
+    @Override
     protected void updateEntityActionState()
     {
         this.despawnEntity();
@@ -179,6 +201,7 @@ public class EntityRainbowSlime extends EntitySlime
         }
     }
 
+    @Override
     protected void alterSquishAmount()
     {
         this.squishAmount *= 0.6F;
@@ -187,11 +210,13 @@ public class EntityRainbowSlime extends EntitySlime
     /**
      * Gets the amount of time the slime needs to wait between jumps.
      */
+    @Override
     protected int getJumpDelay()
     {
         return this.rand.nextInt(20) + 10;
     }
 
+    @Override
     protected EntityRainbowSlime createInstance()
     {
         return new EntityRainbowSlime(this.worldObj);
@@ -200,6 +225,7 @@ public class EntityRainbowSlime extends EntitySlime
     /**
      * Will get destroyed next tick.
      */
+    @Override
     public void setDead()
     {
         int i = this.getSlimeSize();
@@ -225,6 +251,7 @@ public class EntityRainbowSlime extends EntitySlime
     /**
      * Called by a player entity when they collide with an entity
      */
+    @Override
     public void onCollideWithPlayer(EntityPlayer par1EntityPlayer)
     {
         if (this.canDamagePlayer())
@@ -241,6 +268,7 @@ public class EntityRainbowSlime extends EntitySlime
     /**
      * Indicates weather the slime is able to damage the player (based upon the slime's size)
      */
+    @Override
     protected boolean canDamagePlayer()
     {
         return this.getSlimeSize() > 1;
@@ -249,6 +277,7 @@ public class EntityRainbowSlime extends EntitySlime
     /**
      * Gets the amount of damage dealt to the player when "attacked" by the slime.
      */
+    @Override
     protected int getAttackStrength()
     {
         return this.getSlimeSize();
@@ -257,6 +286,7 @@ public class EntityRainbowSlime extends EntitySlime
     /**
      * Returns the sound this mob makes when it is hurt.
      */
+    @Override
     protected String getHurtSound()
     {
         return "mob.slime." + (this.getSlimeSize() > 1 ? "big" : "small");
@@ -265,6 +295,7 @@ public class EntityRainbowSlime extends EntitySlime
     /**
      * Returns the sound this mob makes on death.
      */
+    @Override
     protected String getDeathSound()
     {
         return "mob.slime." + (this.getSlimeSize() > 1 ? "big" : "small");
@@ -273,6 +304,7 @@ public class EntityRainbowSlime extends EntitySlime
     /**
      * Returns the item ID for the item the mob drops on death.
      */
+    @Override
     protected int getDropItemId()
     {
         return this.getSlimeSize() == 1 ? GGItems.glowCrystal.getMetadata(10) : 0;
@@ -281,38 +313,46 @@ public class EntityRainbowSlime extends EntitySlime
     /**
      * Checks if the entity's current position is a valid location to spawn this entity.
      */
-    public boolean getCanSpawnHere()
-    {
-        Chunk chunk = this.worldObj.getChunkFromBlockCoords(MathHelper.floor_double(this.posX), MathHelper.floor_double(this.posZ));
-
-        if (this.worldObj.getWorldInfo().getTerrainType().handleSlimeSpawnReduction(rand, worldObj))
-        {
-            return false;
-        }
-        else
-        {
-            if (this.getSlimeSize() == 1 || this.worldObj.difficultySetting > 0)
-            {
-                BiomeGenBase biomegenbase = this.worldObj.getBiomeGenForCoords(MathHelper.floor_double(this.posX), MathHelper.floor_double(this.posZ));
-
-                if (biomegenbase == BiomeGenBase.swampland && this.posY > 50.0D && this.posY < 70.0D && this.rand.nextFloat() < 0.5F && this.rand.nextFloat() < this.worldObj.getCurrentMoonPhaseFactor() && this.worldObj.getBlockLightValue(MathHelper.floor_double(this.posX), MathHelper.floor_double(this.posY), MathHelper.floor_double(this.posZ)) <= this.rand.nextInt(8))
-                {
-                    return super.getCanSpawnHere();
-                }
-
-                if (this.rand.nextInt(10) == 0 && chunk.getRandomWithSeed(987234911L).nextInt(10) == 0 && this.posY < 40.0D)
-                {
-                    return super.getCanSpawnHere();
-                }
-            }
-
-            return false;
-        }
-    }
+    
+      @Override
+      public boolean getCanSpawnHere()
+      {
+    	  return true;
+      }
+//    @Override
+//    public boolean getCanSpawnHere()
+//    {
+//        Chunk chunk = this.worldObj.getChunkFromBlockCoords(MathHelper.floor_double(this.posX), MathHelper.floor_double(this.posZ));
+//
+//        if (this.worldObj.getWorldInfo().getTerrainType().handleSlimeSpawnReduction(rand, worldObj))
+//        {
+//            return false;
+//        }
+//        else
+//        {
+//            if (this.getSlimeSize() == 1)
+//            {
+//                BiomeGenBase biomegenbase = this.worldObj.getBiomeGenForCoords(MathHelper.floor_double(this.posX), MathHelper.floor_double(this.posZ));
+//
+//                if (biomegenbase == BiomeGenBase.plains && this.posY > 50.0D && this.posY < 70.0D && this.rand.nextFloat() < 0.5F && this.rand.nextFloat() < this.worldObj.getCurrentMoonPhaseFactor() && this.worldObj.getBlockLightValue(MathHelper.floor_double(this.posX), MathHelper.floor_double(this.posY), MathHelper.floor_double(this.posZ)) <= this.rand.nextInt(8))
+//                {
+//                    return super.getCanSpawnHere();
+//                }
+//
+//                if (this.rand.nextInt(10) == 0 && chunk.getRandomWithSeed(987234911L).nextInt(10) == 0 && this.posY < 40.0D)
+//                {
+//                    return super.getCanSpawnHere();
+//                }
+//            }
+//
+//            return false;
+//        }
+//    }
 
     /**
      * Returns the volume for the sounds this mob makes.
      */
+    @Override
     protected float getSoundVolume()
     {
         return 0.4F * (float)this.getSlimeSize();
@@ -322,6 +362,7 @@ public class EntityRainbowSlime extends EntitySlime
      * The speed it takes to move the entityliving's rotationPitch through the faceEntity method. This is only currently
      * use in wolves.
      */
+    @Override
     public int getVerticalFaceSpeed()
     {
         return 0;
@@ -330,6 +371,7 @@ public class EntityRainbowSlime extends EntitySlime
     /**
      * Returns true if the slime makes a sound when it jumps (based upon the slime's size)
      */
+    @Override
     protected boolean makesSoundOnJump()
     {
         return this.getSlimeSize() > 0;
@@ -338,6 +380,7 @@ public class EntityRainbowSlime extends EntitySlime
     /**
      * Returns true if the slime makes a sound when it lands after a jump (based upon the slime's size)
      */
+    @Override
     protected boolean makesSoundOnLand()
     {
         return this.getSlimeSize() > 2;
