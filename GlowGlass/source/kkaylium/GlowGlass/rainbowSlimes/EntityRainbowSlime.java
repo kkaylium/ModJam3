@@ -370,7 +370,7 @@ public class EntityRainbowSlime extends EntitySlime
     @Override
     protected float getSoundVolume()
     {
-        return 0.4F * (float)this.getSlimeSize();
+        return 0.1F * (float)this.getSlimeSize();
     }
 
     /**
