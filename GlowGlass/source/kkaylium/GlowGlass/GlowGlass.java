@@ -117,7 +117,7 @@ public class GlowGlass
 		
 		proxy.registerRenderInformation();
 		EntityRegistry.registerModEntity(EntityRainbowSlime.class, "RainbowSlime", 2, this, 40, 3, true);
-        EntityRegistry.addSpawn(EntityRainbowSlime.class, 5, 2, 6, EnumCreatureType.monster,
+        EntityRegistry.addSpawn(EntityRainbowSlime.class, 2, 1, 3, EnumCreatureType.monster,
         		BiomeGenBase.extremeHills, BiomeGenBase.extremeHillsEdge, BiomeGenBase.plains);
         LanguageRegistry.instance().addStringLocalization("entity.RainbowSlime.name", "Rainbow Slime");
 	}

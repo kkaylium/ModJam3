@@ -4,6 +4,7 @@ import kkaylium.GlowGlass.items.GGItems;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.monster.EntitySlime;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.Item;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.MathHelper;
@@ -232,7 +233,8 @@ public class EntityRainbowSlime extends EntitySlime
 
         if (!this.worldObj.isRemote && i > 1 && this.getHealth() <= 0.0F)
         {
-            int j = 2 + this.rand.nextInt(1);
+           // int j = 2 + this.rand.nextInt(3);
+        	int j = 1;
 
             for (int k = 0; k < j; ++k)
             {
@@ -304,12 +306,25 @@ public class EntityRainbowSlime extends EntitySlime
     /**
      * Returns the item ID for the item the mob drops on death.
      */
-    @Override
-    protected int getDropItemId()
-    {
-        return this.getSlimeSize() == 1 ? GGItems.glowCrystal.getMetadata(10) : 0;
-    }
+//    @Override
+//    protected int getDropItemId()
+//    {
+//        return this.getSlimeSize() == 1 ? GGItems.glowCrystal.getMetadata(10) : 0;
+//    }
 
+    @Override
+    protected void dropFewItems(boolean par1bool, int par2)
+    {
+    	int j;
+    	int k;
+    	
+    	j = this.rand.nextInt(3 + par2) - 1;
+
+        for (k = 0; k < j; ++k)
+        {
+            this.dropItem(GGItems.glowCrystal.getMetadata(10), 1);
+        }
+    }
     /**
      * Checks if the entity's current position is a valid location to spawn this entity.
      */
