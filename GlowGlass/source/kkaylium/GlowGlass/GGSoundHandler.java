@@ -14,6 +14,6 @@ public class GGSoundHandler {
 	{
 		SoundManager manager = event.manager;
 		
-		manager.soundPoolSounds.addSound("glowglass:nyan.ogg");
+		manager.soundPoolStreaming.addSound("glowglass:nyan.ogg");
 	}
 }

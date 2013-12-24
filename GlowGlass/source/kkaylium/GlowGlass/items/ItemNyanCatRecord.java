@@ -79,7 +79,7 @@ public class ItemNyanCatRecord extends ItemRecord{
     
     public String getSoundFile()
     {
-    	return "resources.glowglass.streaming.nyan.ogg";
+    	return "nyan.ogg";
     			//"return "glowglass:nyan.ogg";
     }
 
