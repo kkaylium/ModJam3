@@ -165,7 +165,7 @@ public class EntityRainbowSlime extends EntitySlime
     protected void updateEntityActionState()
     {
         this.despawnEntity();
-        EntityPlayer entityplayer = this.worldObj.getClosestVulnerablePlayerToEntity(this, 16.0D);
+        EntityPlayer entityplayer = this.worldObj.getClosestVulnerablePlayerToEntity(this, 0.5D);
 
         if (entityplayer != null)
         {

@@ -104,6 +104,7 @@ public class GGRecipes {
 		//Other Recipes
 		GameRegistry.addShapelessRecipe(new ItemStack(GGItems.glowCrystal, 1, 10), glowCrystalRED, glowCrystalORANGE, glowCrystalYELLOW, glowCrystalGREEN,  glowCrystalLIGHTBLUE, glowCrystalBLUE, glowCrystalPURPLE, glowCrystalPINK, (new ItemStack(Item.diamond)));
 		GameRegistry.addRecipe(new ItemStack(GGItems.glowDoorItemWHITE, 1), "##",  "**", "##", '#', glass, '*', glowCrystalWHITE);
+		GameRegistry.addRecipe(new ItemStack(GGItems.NyanRecord, 1), "*#", '*', glowCrystalSPECIAL, '#', Item.ingotIron);
 	}
 
 }

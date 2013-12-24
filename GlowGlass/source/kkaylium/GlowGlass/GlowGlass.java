@@ -44,6 +44,8 @@ public class GlowGlass
 		
 		MinecraftForge.EVENT_BUS.register(new DropRainbowCrystal());
 		
+		MinecraftForge.EVENT_BUS.register(new GGSoundHandler());
+		
 		Configuration config = new Configuration(event.getSuggestedConfigurationFile());
 		config.load();
 		

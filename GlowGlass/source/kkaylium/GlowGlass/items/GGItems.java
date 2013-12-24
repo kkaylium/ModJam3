@@ -21,9 +21,11 @@ public class GGItems {
 	public static Item glowDoorItemPURPLE;
 	public static Item glowDoorItemPINK;
 	public static Item glowDoorItemSPECIAL;*/
+	public static Item NyanRecord;
 	
 	public static int GlowCrystalDefaultID = 1000;
 	public static int GlowDoorItemWHITEDefaultID = 600;
+	public static int NyanRecordDefaultID = 1001;
 	/*public static int GlowDoorItemBLACKDefaultID;
 	public static int GlowDoorItemREDDefaultID;
 	public static int GlowDoorItemORANGEDefaultID;
@@ -37,6 +39,9 @@ public class GGItems {
 	
 	public static void initItems()
 	{
+		NyanRecord = new ItemNyanCatRecord(NyanRecordDefaultID, "glowglass:nyan");
+		GameRegistry.registerItem(NyanRecord, "Nyan Record");
+		LanguageRegistry.addName(NyanRecord, "Nyan Cat");
 		glowCrystal = new ItemGlowCrystal(GlowCrystalDefaultID);
 		GameRegistry.registerItem(glowCrystal, "GlowCrystal");
 		LanguageRegistry.addName(new ItemStack(glowCrystal, 1, 0), "Glow Crystal: White");
