@@ -18,7 +18,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class GGDoor extends BlockDoor{
 
-	public Item placerItem;
+//	public Item placerItem;
 	public Icon topDoorIcon;
 	public Icon[] flippedIcons = new Icon[2];
 	
@@ -27,7 +27,8 @@ public class GGDoor extends BlockDoor{
 		this.setLightValue(1.0F);
 		float f = 0.5F;
 		float f1 = 1.0F;
-		this.setBlockBounds(0.5F - f, 0.0F, 0.5F - f, 0.5F + f, f1, 0.5F + f);	
+		this.setBlockBounds(0.5F - f, 0.0F, 0.5F - f, 0.5F + f, f1, 0.5F + f);
+//		this.placerItem=GGItems.glowDoorItemWHITE;
 	}
 	
 	public Icon getBlockTexture(IBlockAccess par1IBlockAccess, int par2, int par3, int par4, int par5)
@@ -77,7 +78,7 @@ public class GGDoor extends BlockDoor{
 
 	public int idPicked(World par1World, int par2, int par3, int par4)
 	{
-	    return this.placerItem.itemID;
+	    return GGItems.glowDoorItemWHITE.itemID;
 	}
 	
 	@Override 
