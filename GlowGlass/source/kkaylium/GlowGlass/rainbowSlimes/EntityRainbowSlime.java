@@ -18,6 +18,9 @@ public class EntityRainbowSlime extends EntitySlime
     public float squishFactor;
     public float prevSquishFactor;
 
+    //The particle effect
+    String glowSlimeParticle = "iconcrack_" + GGItems.glowCrystal.itemID + "_10"; 
+    
     /** the time between each jump of the slime */
     private int slimeJumpDelay;
 
@@ -98,7 +101,7 @@ public class EntityRainbowSlime extends EntitySlime
     @Override
     protected String getSlimeParticle()
     {
-        return "slime";
+        return glowSlimeParticle;
     }
 
     /**
