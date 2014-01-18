@@ -403,6 +403,17 @@ public class EntityRainbowSlime extends EntitySlime
     {
         return this.getSlimeSize() > 2;
     }
+    
+    public void onStruckByLightning(EntityLightningBolt par1EntityLightningBolt)
+    {
+        if (!this.worldObj.isRemote)
+        {
+            EntityMagmaCube entitymagmacube = new EntityMagmaCube(this.worldObj);
+            entitymagmacube.setLocationAndAngles(this.posX, this.posY, this.posZ, this.rotationYaw, this.rotationPitch);
+            this.worldObj.spawnEntityInWorld(entitymagmacube);
+            this.setDead();
+        }
+    }
 
 	
 
