@@ -109,6 +109,8 @@ public class GlowGlass
 		
 		GameRegistry.registerWorldGenerator(new GGBiomeOreGen());
 		
+		DungeonHooks.addDungeonMob("Rainbow Slime", 50);
+		
 		LanguageRegistry.instance().addStringLocalization("itemGroup.Glow Glass", "Glow Glass");
 	}
 	
